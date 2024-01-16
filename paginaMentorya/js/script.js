@@ -12,7 +12,6 @@ cerrar.addEventListener("click",() => {
 
 })
 
-
 // ------------------------------Script del slider del equipo---------------------------------------------
 let slider = document.querySelector('.contenedor-galeria');
 let img = document.querySelectorAll('img');
