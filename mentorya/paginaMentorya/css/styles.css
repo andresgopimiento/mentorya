@@ -92,7 +92,11 @@ header{
     display: flex;
     flex-direction: column;
 }
-
+.cajaDescripción{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 section .cajaDescripcion, .cajaMisionVision {
     display: flex;
     justify-content: space-around;
