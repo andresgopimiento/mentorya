@@ -1,3 +1,4 @@
+
 const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#abrir");
 const cerrar = document.querySelector("#cerrar");
@@ -8,7 +9,9 @@ abrir.addEventListener("click",() => {
 
 cerrar.addEventListener("click",() => {
     nav.classList.remove("visible");
+
 })
+
 // ------------------------------Script del slider del equipo---------------------------------------------
 let slider = document.querySelector('.contenedor-galeria');
 let img = document.querySelectorAll('img');
