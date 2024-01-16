@@ -57,7 +57,8 @@ header{
     .nav {
         opacity: 0;
 
- 
+    }
+}
     .nav {
          opacity: 0;
         visibility: hidden; 
@@ -91,7 +92,7 @@ header{
         text-decoration: none;
         color: whitesmoke;
     }
-}
+
 
 
 /*Inicio de Misión y visión*/
@@ -264,6 +265,4 @@ section article .btn-sig{
     position: absolute;
     top: 50%;
     right: 0;
-}
-
 }
