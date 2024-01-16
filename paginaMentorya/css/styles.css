@@ -93,7 +93,8 @@ header{
     display: flex;
     flex-direction: column;
 }
-.cajaDescripción{
+.cajaDescripcion{
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -105,11 +106,6 @@ section .cajaDescripcion, .cajaMisionVision {
     flex-wrap: wrap;
 
 }
-
-.cajaDescripcion {
-    background-color: aquamarine;
-}
-
 
 section .parrafoTituloMisionVision, .descripcionTituloParrafo {
     text-align: justify;
@@ -126,7 +122,7 @@ section .parrafoTituloMisionVision h3, .descripcionTituloParrafo h2 {
 
 section .cajaImagenesMisionVision, .cajaImagenDescripcion {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
 }
 
