@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,700;1,100;1,700;1,900&display=swap');
+
 body {
     box-sizing: border-box;
     font-family: 'Kulim Park', sans-serif;
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(#3E1F47, #212f45);
+    background: linear-gradient(#3E1F47, #212f45) no-repeat;
     color: white;
 }
 
