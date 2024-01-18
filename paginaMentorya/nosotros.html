@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Sobre nosotros</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/nosotros-styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
@@ -14,6 +14,7 @@
 
 <header>
     <img class="logo" src="assets/Logo-Mentorya[1].svg" alt="logo">
+    <p>Mentorya</p>
     <button id="abrir" class="abrir_menu"><i class="bi bi-list"></i></button>
 
     <nav class="nav" id="nav"> 
@@ -21,60 +22,56 @@
         <ul class="nav_list">
             <li><a  href="#home">Inicio</a></li>
             <li><a  href="#about">Nosotros</a></li>
-            <li><a  href="#portfolio">Contacto</a></li>
-            <li><a  href="#contact">Sing up</a></li>
+            <li><a  href="/contacto.html">Contacto</a></li>
+            <li><a  href="/contacto.html">Sing up</a></li>
             <li><a  href="#contact">Sing in</a></li>
         </ul>
     </nav>
 </header>
 
 
-<!-- CONTENIDO DE SOBRENOSOTROS -->
+<!-- CONTENIDO DESCRIPCION, MISIÓN Y VISIÓN -->
 
-    <main class="main">
+    <main class="contenido">
+        <div class="cajaIntroduccion">  
+            <div class="introduccion">
+                <p>Hola, somos <strong>Mentorya</strong>, una pataforma para que ofrezcas tus servicios profesionales, los contrates o quieras aprender algo😎</p>
+            </div>
+        </div>
+        <hr>
+
         <!-- Breve descripción -->
-        <section>
-            <article id="breveDescripcion">
-                <div class="cajaDescripcion">
-                    <div class="descripcionTituloParrafo">
+        <section class="descripcionMisionVision">
+
+            <article class="cajaDescripcion">
+                    <div class="parrafoDescripcionMisionVision">
                         <h2>Mentorya</h2>
                         <p>Somos una plataforma en línea que ofrece soluciones y servicios para aquellos que quieran contratar un tutor en algún área, o contratar servicios profesionales.</p>
                     </div>
 
-                    <div class="cajaImagenDescripcion">
-                        <img src="assets/imagenDescripcion.jpg" alt="imagen de la descripción" width="300px" height="300px" class="imagenDescripcion">
+                    <!-- Caja de imagen descripción -->
+                    <div class="cajaImagenesDescripcionMisionVision">
+                        <img src="assets/descripcion-breve.gif" alt="imagen de la descripción" class="imagenesDescripcionMisionVision">
                     </div>
-                </div>
             </article>
 
-            <!-- Misión y visión -->
-            <article id="misionVision">
-
-                <!-- Caja de Misión -->
-                <div class="cajaMisionVision">
-                    <div class="parrafoTituloMisionVision">
+            <!-- MISIÓN -->
+                <article class="cajaMision">
+                    <div class="parrafoDescripcionMisionVision">
                         <h3>Misión</h3>
-                            <p>La Misión de Mentorya es facilitar un aprendizaje integral y práctico para todas las generaciones a través de una plataforma inclusiva. 
-                                
+                            <p>La Misión de Mentorya es facilitar un aprendizaje integral y práctico para todas las generaciones a través de una plataforma inclusiva.</p>  
                             <p>Nos comprometemos a proporcionar un espacio interactivo y personalizado, donde los expertos guíen a los usuarios en el dominio de habilidades prácticas, fortaleciendo su capacidad para afrontar desafíos cotidianos y fomentando una comunidad educativa diversa y colaborativa.</p>
-                        </p>
-
-                </div>
-
                     </div>
-
-                
 
                 <!-- Caja de imagen e imagen Misión -->
-                    <div class="cajaImagenesMisionVision">
-                        <img src="assets/mision.jpg" alt="imagen de la misión" class="imagenMisionVision">
+                    <div class="cajaImagenesDescripcionMisionVision">
+                        <img src="assets/imagen-mision.gif" alt="imagen de la misión" class="imagenesDescripcionMisionVision">
                     </div>
-                </div>
-
+                </article>
                 
-                <!-- Caja de Visión -->
-                <div class="cajaMisionVision">
-                    <div class="parrafoTituloMisionVision">
+                <!-- VISIÓN -->
+                <article class="cajaVision">
+                    <div class="parrafoDescripcionMisionVision">
                         <h3>Visión</h3>
                             <p>La Visión de Mentorya es ser el líder en Colombia y más allá, promoviendo un aprendizaje sin límites generacionales y sociales. 
                             </p>    
@@ -87,61 +84,53 @@
                     </div>
                 
                     <!-- Caja de imagen e imagen visión -->
-                    <div class="cajaImagenesMisionVision">
-                        <img src="assets/vision.jpg" alt="Imagen de la vision" class="imagenMisionVision">
+                    <div class="cajaImagenesDescripcionMisionVision">
+                        <img src="assets/imagen-vision.gif" alt="Imagen de la vision" class="imagenesDescripcionMisionVision">
                     </div>
-                </div>
+            </article> 
 
-                
-            </article>
-            
         </section>
 
+        <section class="contenedor__equipo">
 
-        <!-- Equipos -->
-    </section>
-
-    <!-- Equipos -->
-    <section class="contenedor__equipo">
-
-        <!-- Equipo de trabajo en general -->
-        <article class="articulo-equipo">
-            <h1 class="equipo-titulo">Este es nuestro equipo</h1>
-            <p class="equipo-parrafo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi aut reiciendis doloribus ducimus voluptatum, iste dignissimos dolor totam culpa, odit consequatur, eaque corrupti ratione. Ad at cupiditate rem aspernatur natus!</p>
-        </article>
-
-    <!-- Despliegue información de cada integrante -->
-    <article class="articulo-integrantes">
-        <div class="contenedor">
-            <div class="contenedor-galeria">
-                <img src="assets/Sebastian T.jpg" alt="">
-                    <div class="contenedor-imagenp">
-                        <h4>Sebastian Tobon </h4>
-                        <p> Soy un apasionado desarrollador Front-end con sólidos conocimientos en la creación de interfaces atractivas y funcionales. Mi enfoque se distingue no solo por mis habilidades técnicas en Javascript y librerías como React, sino también por mi actitud positiva y habilidades de comunicación efectiva. </p>
-                    </div>
-                <img src="assets/Andres G.jpg" alt="">
-                    <div class="contenedor-imagenp2">
-                        <h4>Andres Gomez</h4>
-                        <p> Desarrollador Fullstack Java,  apasionado por la ciberseguridad y el Hacking ético. Amante de la tecnología, los gatos y la pizza. Lo que nunca me falta: una buena taza de café. </p>
-                    </div>
-                <img src="assets/daniela.avif" alt="">
-                    <div class="contenedor-imagenp3">
-                        <h4>Daniela Rico</h4>
-                        <p> Diseñadora de experiencia de usuario  y diseño grafico. Community Manager.  Aprendiz de desarrollo web  apasionada por la interacción intuitiva, uso:  HTML & CSS;  Adobe Ilustrator. Amante de una comunicación abierta y segura. </p>
+            <!-- Equipo de trabajo en general -->
+            <article class="articulo-equipo">
+                <h1 class="equipo-titulo">Este es nuestro equipo</h1>
+                <p class="equipo-parrafo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi aut reiciendis doloribus ducimus voluptatum, iste dignissimos dolor totam culpa, odit consequatur, eaque corrupti ratione. Ad at cupiditate rem aspernatur natus!</p>
+            </article>
+    
+        <!-- Despliegue información de cada integrante -->
+        <article class="articulo-integrantes">
+            <div class="contenedor">
+                <div class="contenedor-galeria">
+                    <img src="assets/Sebastian T.jpg" alt="">
+                        <div class="contenedor-imagenp">
+                            <h4>Sebastian Tobon </h4>
+                            <p> Soy un apasionado desarrollador Front-end con sólidos conocimientos en la creación de interfaces atractivas y funcionales. Mi enfoque se distingue no solo por mis habilidades técnicas en Javascript y librerías como React, sino también por mi actitud positiva y habilidades de comunicación efectiva. </p>
                         </div>
-                <img src="assets/joan.jpg" alt="">
-                    <div class="contenedor-imagenp4">
-                        <h4>Joan Vargas</h4>
-                        <p> Estudiante de desarrollo de software y desarrollador web full stack, manejo tecnologías como son HTML5, CSS, JavaScript, Java, Php, el back-end es mi parte favorita; soy un apasionado por el autoaprendizaje, me gusta ser muy relajado y soy un hombre tranquilo. </p>
+                    <img src="assets/Andres G.jpg" alt="">
+                        <div class="contenedor-imagenp2">
+                            <h4>Andres Gomez</h4>
+                            <p> Desarrollador Fullstack Java,  apasionado por la ciberseguridad y el Hacking ético. Amante de la tecnología, los gatos y la pizza. Lo que nunca me falta: una buena taza de café. </p>
+                        </div>
+                    <img src="assets/daniela.avif" alt="">
+                        <div class="contenedor-imagenp3">
+                            <h4>Daniela Rico</h4>
+                            <p> Diseñadora de experiencia de usuario  y diseño grafico. Community Manager.  Aprendiz de desarrollo web  apasionada por la interacción intuitiva, uso:  HTML & CSS;  Adobe Ilustrator. Amante de una comunicación abierta y segura. </p>
+                            </div>
+                    <img src="assets/joan.jpg" alt="">
+                        <div class="contenedor-imagenp4">
+                            <h4>Joan Vargas</h4>
+                            <p> Estudiante de desarrollo de software y desarrollador web full stack, manejo tecnologías como son HTML5, CSS, JavaScript, Java, Php, el back-end es mi parte favorita; soy un apasionado por el autoaprendizaje, me gusta ser muy relajado y soy un hombre tranquilo. </p>
+                        </div>
                     </div>
+                <div class="contenedor-botones">
+                    <button class="btn-atras" id="prev-boton"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="btn-sig" id="next-boton"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
-            <div class="contenedor-botones">
-                <button class="btn-atras" id="prev-boton"><i class="fa-solid fa-arrow-left"></i></button>
-                <button class="btn-sig" id="next-boton"><i class="fa-solid fa-arrow-right"></i></button>
             </div>
-        </div>
-    </article>
-    </section>
+        </article>
+        </section>
 
 
     </main>
