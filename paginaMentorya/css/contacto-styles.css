@@ -1,81 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,700;1,100;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,700;1,100;1,700;1,900&display=swap");
 
 body {
-    box-sizing: border-box;
-    font-family: 'Kulim Park', sans-serif;
-    font-family: 'Lato', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(#3E1F47, #212f45) no-repeat;
-    color: white;
+  box-sizing: border-box;
+  font-family: "Kulim Park", sans-serif;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(#3e1f47, #212f45) no-repeat;
+  color: white;
 }
 
 /*CSS de Joan - Barra de NAvegación*/
-img.logo{
-    border-radius: 50%;
-    height: 32px;
-    width: 32px;
+img.logo {
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
 }
 
-header{
-    display:flex;
-    background-color: rgb(192, 170, 202);
-    align-items: center;
-    justify-content:space-between;
-    padding: 0;
-    margin: 0;
+header {
+  display: flex;
+  background-color: rgb(192, 170, 202);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
 }
 
-.nav_list{
-    display: flex;
-    list-style-type: none;
-    gap:1rem;
+.nav_list {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
 }
 .nav_list li a {
-    text-decoration: none;
-    color: black;
-    padding: 2rem;
+  text-decoration: none;
+  color: black;
+  padding: 2rem;
 }
 .abrir_menu,
-.cerrar_menu{
-    display: none;
+.cerrar_menu {
+  display: none;
 }
 
 @media (max-width: 762px) {
-    .abrir_menu,
-    .cerrar_menu{
-        display: block;
-        border: 0;
-        font-size: 2rem;
-        background-color: transparent;
-        cursor: pointer;
-    }
-    .nav {
-        opacity: 0;
-        visibility: hidden; 
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        position: absolute;
-        top:0;
-        right: 0;
-        bottom: 0;
-        background-color: rgb(100, 19, 138);
-        box-shadow: 0 0 0 100vmax rgba(236, 236, 236, 0.5);
-    }
+  .abrir_menu,
+  .cerrar_menu {
+    display: block;
+    border: 0;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(100, 19, 138);
+    box-shadow: 0 0 0 100vmax rgba(236, 236, 236, 0.5);
+  }
 
-    .nav.visible{
-        opacity: 1;
-        visibility: visible;
-    }
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
 
-    .nav_list{
-        flex-direction: column;
-        align-items: end;
-    }
+  .nav_list {
+    flex-direction: column;
+    align-items: end;
+  }
 
-    .nav_list li a {
-        text-decoration: none;
-        color: whitesmoke;
-    }
+  .nav_list li a {
+    text-decoration: none;
+    color: whitesmoke;
+  }
+}
+/*contacto DANIELA*/
+.form {
+  background: linear-gradient(
+    180deg,
+    rgba(66, 43, 79, 0.97) 7%,
+    rgba(76, 43, 79, 0.72) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 470px;
+  height: 617px;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  margin: auto;
+}
+.form input,
+.form textarea,
+.form button {
+  width: 285px;
+  height: 36px;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 2px solid #dc9d00;
+}
+.form textarea {
+  height: 97px;
+}
+.form button {
+  background-color: #d8bae0;
+}
+
+.contacto {
+  background: url("../assets/contacto-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: auto;
+  background-position: right;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: center end;
 }
