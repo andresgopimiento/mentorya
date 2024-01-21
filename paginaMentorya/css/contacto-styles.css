@@ -113,7 +113,7 @@ header {
 }
 
 .contacto {
-  background: url("../assets/contacto-bg.png");
+  background: url("../assets/contacto.svg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
