@@ -12,18 +12,19 @@ body {
 
 /*CSS de Joan - Barra de NAvegación*/
 img.logo {
-  border-radius: 50%;
-  height: 32px;
-  width: 32px;
+  width: 7%;
+  margin-left: 2%;
+  /* background-color: red; */
 }
 
 header {
   display: flex;
-  background-color: rgb(192, 170, 202);
+  background-color: #dbbce4;
   align-items: center;
   justify-content: space-between;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 .nav_list {
@@ -90,35 +91,42 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 470px;
-  height: 617px;
+  width: 35vw;
+  height: 70vh;
   grid-column-start: 1;
   grid-column-end: 1;
-  margin: auto;
+  margin-left: 3vw;
+  padding: 20px;
+  border-radius: 20px;
+}
+.form label{
+  font-weight: bold;
 }
 .form input,
 .form textarea,
 .form button {
-  width: 285px;
+  width: 70%;
   height: 36px;
   margin: 20px auto;
   border-radius: 10px;
-  border: 2px solid #dc9d00;
+  border: 1.5px solid #dc9d00;
+  font-size: 10px;
+  padding: 5px;
 }
 .form textarea {
-  height: 97px;
+  height: 10%;
 }
 .form button {
   background-color: #d8bae0;
+  font-weight: 600;
 }
 
 .contacto {
   background: url("../assets/contacto.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
-  width: auto;
   background-position: right;
+  height: 90vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-content: center end;
