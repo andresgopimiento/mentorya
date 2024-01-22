@@ -310,7 +310,7 @@ img {
     filter: blur(0px);
   }
 
-  main div .introduccion {
+  .introduccion {
     font-size: 20px;
     padding: 3rem;
   }
