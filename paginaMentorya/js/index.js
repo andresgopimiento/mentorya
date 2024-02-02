@@ -9,7 +9,8 @@ abrir.addEventListener("click",() => {
 cerrar.addEventListener("click",() => {
     nav.classList.remove("visible");
 
-})document.addEventListener('DOMContentLoaded', function() {
+})
+document.addEventListener('DOMContentLoaded', function() {
     var colorContainer = document.querySelector('.resaltado2');
     updateColor(colorContainer);
 
