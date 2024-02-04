@@ -4,12 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
+  <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-  <h1>Login Mentorya</h1>
-  <a href="/index.html">inicio</a>
-  <a href="/pages/contacto.html">contactanos</a>
-  <a href="/pages/nosotros.html">nosotros</a>
-  <a href="/pages/registro.html">registro</a>
+  <header>
+    <img class="logo" src="/assets/Logo-Mentorya[1].svg" alt="logo" />
+    <button id="abrir" class="abrir_menu"><i class="bi bi-list"></i></button>
+
+    <nav class="nav" id="nav">
+      <button id="cerrar" class="cerrar_menu">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <ul class="nav_list">
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/pages/nosotros.html">Nosotros</a></li>
+        <li><a href="/pages/registro.html">Registro</a></li>
+        <li><a href="/pages/login.html"></a>Login</li>
+      </ul>
+    </nav>
+  </header>
+    <main>
+        <div class="formulario">
+            <h1>login</h1>
+            <form action="post">
+                <div class="userName">
+                    <input type="text" placeholder="Nombre" required>
+                </input>
+                </div>
+                <div class="userName">
+                    <input type="password" placeholder="contraseña" required>
+                </input>
+                </div>
+                <div class="recordar">
+                    ¿olvido su contraseña?
+                </div>
+                <input type="submit" value="iniciar">
+                <div class="registro">
+                    no tienes cuenta <a href="">registrate</a>
+                </div>
+            </form>
+        </div>
+    </main>
+   <footer>
+    
+   </footer> 
 </body>
 </html>
