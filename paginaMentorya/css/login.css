@@ -115,6 +115,11 @@ img.logo:hover{
     text-decoration: none;
     color: whitesmoke;
   }
+}
+.abrir_menu,
+.cerrar_menu {
+  display: none;
+}
 
 @media (max-width: 762px) {
   .abrir_menu,
@@ -257,5 +262,4 @@ a:hover{
       justify-content:space-around;
       padding: 2rem;
     }
-}
 }

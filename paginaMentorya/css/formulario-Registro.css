@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,700;1,100;1,700;1,900&display=swap");
+body {
+  box-sizing: border-box;
+  font-family: "Kulim Park", sans-serif;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(#3e1f47, #212f45);
+  color: white;
+}
+
+/*------INICIO BARRA DE NAVEGACIÓN*-------*/
+img.logo {
+  width: 7%;
+  margin-left: 2%;
+  /* background-color: red; */
+}
+
+header {
+  display: flex;
+  background-color: #dbbce4;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.nav_list {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+}
+.nav_list li a {
+  text-decoration: none;
+  color: black;
+  padding: 2rem;
+}
+.abrir_menu,
+.cerrar_menu {
+  display: none;
+}
+
+
+/*------FIN BARRA DE NAVEGACIÓN------*/
+
+/*----INICIO DE CONTENIDO-----*/
+.contenido {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/*-----INICIO DE FORMULARIO----*/
+.formularioEImagen {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.form{
+  background: linear-gradient(
+    180deg,
+    rgba(66, 43, 79, 0.97) 7%,
+    rgba(76, 43, 79, 0.72) 100%);
+    max-width: 80vw;
+    height: 70vh;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 8%;
+
+}
+.form label {
+  font-weight: bold;
+}
+
+.cajaCampos {
+  background-color:#3e1f47;
+  border-radius: 12%;
+  display: inline-block;
+}
+
+.sectionImagenFormulario {
+  display: block;
+  width: 100vw;
+  margin-top: 1rem;
+}
+.cajaImagenFormulario{
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.8rem;
+}
+
+.imagenFormulario{
+  width: 80%;
+  border-radius: 12%;
+  border: 1px solid #dbbce4;
+  box-shadow: 10px 0 15px;
+}
+
+/*---FIN DE FORMULARIO----*/
+
+/*---INICIO CONTENIDO ADICIONAL---*/
+.eleccion {
+  box-sizing: content-box;
+  padding: 1.5rem;
+  margin-top: 2rem;
+ text-align: center;
+ font-size: 25px;
+}
+
+
+
+
+
+
+
+
+/*----FIN DE CONTENIDO----*/
+
+/*---------FOOTER-------------*/
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    background-color: #dbbce4;
+    padding: 20px;
+    color: rgb(8, 8, 8);
+  }
+  
+  .logo-footer {
+    /* Estilos para la sección del logo */
+    width: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .sobre-nosotros {
+    /* Estilos para la sección "Sobre nosotros" */
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    
+  }
+  
+  li{
+    /* Estilos para la sección "Sobre nosotros" */
+    list-style-type: none; 
+  }
+  
+  .redes {
+    /* Estilos para la sección de redes sociales */
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    
+  }
+  
+  .icon-footer{
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-evenly;
+    padding: 2rem;
+    /* box-shadow: ; */
+  }
+  
+  a{
+    color: rgb(12, 12, 12);
+    text-decoration: none;
+  }
+  a:hover{
+    color: rgb(49, 15, 201);
+    font-size: 20px;
+  }
+
+
+/*👁️---MEDIA QUERYS----*/
+
+/*---TABLETS---*/
+@media only screen and (max-width: 1024px){
+
+
+
+}
+
+/*📲--Celulares---*/
+
+@media only screen and (max-width: 768px) {
+
+  /*BARRA DE NAVEGACIÓN*/
+  .abrir_menu,
+  .cerrar_menu {
+    display: block;
+    border: 0;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(100, 19, 138);
+    box-shadow: 0 0 0 100vmax rgba(236, 236, 236, 0.5);
+  }
+
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav_list {
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .nav_list li a {
+    text-decoration: none;
+    color: whitesmoke;
+  }
+
+}  

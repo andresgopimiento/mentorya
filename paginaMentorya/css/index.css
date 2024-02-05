@@ -116,6 +116,12 @@ img.logo:hover{
     color: whitesmoke;
   }
 }
+
+.abrir_menu,
+.cerrar_menu {
+  display: none;
+}
+
 /*-----------CAJA INTRODUCCIÓN-----------*/
 
 .cajaIntroduccion {
@@ -164,7 +170,7 @@ section .cajaDescripcion,
 
 section .parrafoDescripcionMisionVision h3,
 section .parrafoDescripcionMisionVision h2 {
-  text-align: center;
+  text-align: center; 
   background-color: #3e1f47;
   opacity: 1.8; 
 }
@@ -204,6 +210,7 @@ section .parrafoDescripcionMisionVision {
 
 section .cajaImagenesDescripcionMisionVision {
   display: flex;
+  padding-top: 2rem;
   padding: 0;
   margin: 0;
   width: 60vw;
@@ -426,7 +433,7 @@ img {
     margin: 0;
   }
 
-  /*Inicio de Misión y visión*/
+  /*----CONTENIDO DE LA PÁGINA-----*/
 
   section .cajaDescripcion,
   .cajaMision,
@@ -441,6 +448,10 @@ img {
     margin: 0;
   }
 
+  section .parrafoDescripcionMisionVision h3,
+  h2 {
+    text-align: center;
+  }
 
   section .parrafoDescripcionMisionVision {
     text-align: justify;
@@ -460,6 +471,7 @@ img {
 
   section .imagenesDescripcionMisionVision {
     border-radius: 15%;
+    border: 8px solid #212f45;
     padding: 0;
     margin: 0;
     width: 100%;
