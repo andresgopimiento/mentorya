@@ -9,7 +9,7 @@ body {
   color: white;
 }
 
-/*Barra de Navegación*/
+/*BARRA DE NAVEGACIÓN*/
 img.logo {
   border-radius: 50%;
   height: 32px;
@@ -87,49 +87,21 @@ section .cajaDescripcion,
 }
 
 section .parrafoDescripcionMisionVision h3,
-section .parrafoDescripcionMisionVision h2 {
+h2 {
   text-align: center;
-  background-color: #3e1f47;
-  opacity: 1.8; 
-}
-
-section .parrafoDescripcionMisionVision h3::after,
-section .parrafoDescripcionMisionVision h2::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 30%;
-  background-color: inherit;
-  filter: blur(25px);
-  z-index: -1;
 }
 
 section .parrafoDescripcionMisionVision {
   text-align: justify;
   font-size: 30px;
   max-width: 80%;
-  filter: contrast(120%);
 }
-
-section .parrafoDescripcionMisionVision p {
-
-}
-
-.resaltado1 {
-  background-color: rgb(100, 19, 138);
-}
-.resaltado2 {
-  opacity: 150%;
-}
-
 
 /*Tamaño de las imágenes*/
 
 section .cajaImagenesDescripcionMisionVision {
   display: flex;
+  padding-top: 2rem;
   padding: 0;
   margin: 0;
   width: 60vw;
@@ -138,12 +110,10 @@ section .cajaImagenesDescripcionMisionVision {
 section .imagenesDescripcionMisionVision {
   width: 400px;
   border-radius: 15%;
-  border-bottom-right-radius: 25%;
-  border-top-left-radius: 25%;
-  border-style: groove;
+  border: 8px solid #212f45;
   padding: 0;
   margin: 0;
-  width: 90%;
+  width: 100%;
 }
 
 /* ------------------------------------Articulo imagenes del equipo-------------------------------------------------*/
@@ -352,7 +322,7 @@ img {
     margin: 0;
   }
 
-  /*Inicio de Misión y visión*/
+  /*----CONTENIDO DE LA PÁGINA-----*/
 
   section .cajaDescripcion,
   .cajaMision,
@@ -367,6 +337,10 @@ img {
     margin: 0;
   }
 
+  section .parrafoDescripcionMisionVision h3,
+  h2 {
+    text-align: center;
+  }
 
   section .parrafoDescripcionMisionVision {
     text-align: justify;
@@ -386,6 +360,7 @@ img {
 
   section .imagenesDescripcionMisionVision {
     border-radius: 15%;
+    border: 8px solid #212f45;
     padding: 0;
     margin: 0;
     width: 100%;
