@@ -9,7 +9,6 @@ abrir.addEventListener("click",() => {
 
 cerrar.addEventListener("click",() => {
     nav.classList.remove("visible");
-
 })
 
 // ------------------------------Script del slider del equipo---------------------------------------------

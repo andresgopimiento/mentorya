@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,700;1,100;1,700;1,900&display=swap");
 * {
   box-sizing: border-box;
   font-family: "Kulim Park", sans-serif;
@@ -6,15 +7,18 @@
   padding: 0;
 }
 html{
+  background: var(--main-bg-color);
+}
+main{
   background: rgb(33,47,69);
   background: linear-gradient(0deg, rgba(33,47,69,0.9248074229691877) 35%, rgba(62,31,71,1) 100%) ;
-  height: 100vh;
 }
 :root {
   --main-bg-color: #3E1F47;
   --main-cont-color: #ECFDFE;
   --main-bgd-color: #212F45;
 }
+/*CSS de Joan - Barra de NAvegación*/
 img.logo {
   border-radius: 50%;
   height: 35px;
@@ -76,4 +80,142 @@ img.logo:hover{
 }
 .color-a{
   color: var(--main-cont-color) !important;
+}
+@media (max-width: 762px) {
+  .abrir_menu,
+  .cerrar_menu {
+    display: block;
+    border: 0;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(100, 19, 138);
+    box-shadow: 0 0 0 100vmax rgba(236, 236, 236, 0.5);
+  }
+
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav_list {
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .nav_list li a {
+    text-decoration: none;
+    color: whitesmoke;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  background-color: #dbbce4;
+  padding: 20px;
+  color: rgb(8, 8, 8);
+}
+
+.logo-footer {
+  /* Estilos para la sección del logo */
+  width: 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.sobre-nosotros {
+  /* Estilos para la sección "Sobre nosotros" */
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  
+}
+
+li {
+  /* Estilos para la sección "Sobre nosotros" */
+  list-style-type: none; 
+}
+
+.redes {
+  /* Estilos para la sección de redes sociales */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  
+}
+
+.icon-footer{
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:space-evenly;
+  padding: 2rem;
+  /* box-shadow: ; */
+}
+
+.a{
+  color: rgb(12, 12, 12);
+  text-decoration: none;
+}
+article a:hover{
+  color: rgb(49, 15, 201);
+  font-size: 20px;
+}
+
+@media(max-width:901px){
+  footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+      background-color: #dbbce4;
+      padding: 20px;
+    }
+}
+
+@media(max-width:400px){
+  footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+      background-color: #dbbce4;
+      padding: 20px;
+    }
+
+    .icon-footer{
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content:space-around;
+      padding: 2rem;
+    }
 }
