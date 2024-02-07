@@ -13,46 +13,44 @@
 <!-----👁️ ENCABEZADO DE PÁGINA------>
   </head>
   <body>
-    <header>
-      <img class="logo" src="/assets/Logo-Mentorya[1].svg" alt="logo" />
-      <!-- Inicio de botones para MediaQuerys -->
+    <header class="header">
+      <img class="logo" src="/assets/Logo-Mentorya[1].svg" alt="logo">
       <button id="abrir" class="abrir_menu"><i class="bi bi-list"></i></button>
-      <nav class="nav" id="nav">
-        <button id="cerrar" class="cerrar_menu">
-          <i class="bi bi-x-lg"></i>
-        </button>
-        <ul class="nav_list">
-          <li><a href="/index.html">Inicio</a></li>
-          <li><a href="/pages/nosotros.html">Nosotros</a></li>
-          <li><a href="/pages/registro.html">Registro</a></li>
-          <li><a href="/pages/login.html">Login</a></li>
-        </ul>
+  
+      <nav class="nav" id="nav"> 
+          <button id="cerrar" class="cerrar_menu"><i class="bi bi-x-lg"></i></button>
+          <ul class="nav_list">
+              <li class="contenedor-li"><a  href="/index.html">Inicio</a></li>
+              <li class="contenedor-li"><a  href="/pages/registro.html">Contacto</a></li>
+              <li class="contenedor-li"><a  href="/pages/nosotros.html">Nosotros</a></li>
+              <li class="contenedor-li back-logo"><a  href="/pages/login.html" class="color-a">Login</a></li>
+          </ul>
       </nav>
     </header>
 
 
 <!-----👁️ CONTENIDO DE PÁGINA------>
     <main class="contenido">
-
       <section class="formularioEImagen">
         <article class="registroVendedores">
 
 <!--  ---👁️ FORMULARIO---- -->
           <form class="form" id="contactForm">
-            <h3>Registro</h3>
+            <h3>Registro Mentores</h3>
+            <div class="Contenedor-inputs">
             <div class="cajaCampos">
               <label for="name">Nombres</label> 
-                <input type="text" name="name" id="name" placeholder="Nombres" required/>
+                <input type="text" name="name" id="name" placeholder="Ej: Juan" required/>
             </div>      
 
             <div class="cajaCampos"> 
               <label for="lastName">Apellidos</label>
-                <input type="text" name="lastName" id="lastName" placeholder="Apellidos" required/>
+                <input type="text" name="lastName" id="lastName" placeholder="Ej: Gonzales Perez" required/>
             </div>
 
             <div class="cajaCampos">
               <label for="email">Correo Electrónico</label>
-                <input type="email" name="email" id="email" placeholder="Escribir email" required/>
+                <input type="email" name="email" id="email" placeholder="Ej: juan@gmail.com" required/>
             </div>
 
           <div class="cajaCampos">
@@ -326,7 +324,10 @@
             <label for="email">Profesión/Ocupación</label>
               <input type="email" name="email" id="email" placeholder="Escribir email" required/>
           </div>
-          
+          <div class="cajaCampos btn">
+            <button type="button">Registrar</button>
+          </div>
+        </div>
         </form>
       </article>
 
@@ -336,19 +337,23 @@
         </div>
       </article>
     </section>
-    <hr>
     <section>
       <article class="eleccion">
-        <mark><strong>¿Por qué escoger Mentorya?</strong></mark>
-        <p>¡Somos la plataforma top Latinoamérica, además somos <strong>¡Gratis!</strong></p>
+        <strong>¿Por qué escoger Mentorya?</strong></mark>
+        <div class="contenedor-texto-mentoria">
+          <div class="parrafos-mentoria">
+            <p>¡Somos la plataforma top Latinoamérica, además somos ¡Gratis!</p>
 
-        <p>Te conectamos con alguien profesional en el <mark>área de tu interés</mark>, quién podrá ayudarte.</p>
+            <p>Te conectamos con alguien profesional en el <mark>área de tu interés</mark>, quién podrá ayudarte.</p>
 
-        <p>Sabemos lo <mark>difícil y tedioso</mark> que es encontrar alguien que te enseñe, eplique o solucione un tema en general.</p>
-
-        <img class="imagenFormulario" src="/assets/learnskills.jpg" alt="Aprendiendo habilidades">
-        <p>Empieza a buscar lo que te gusta.</p>
-        <a href="#contactForm" ><mark>¡REGÍSTRATE AHORA!</mark></a>
+            <p>Sabemos lo <mark>difícil y tedioso</mark> que es encontrar alguien que te enseñe, eplique o solucione un tema en general.</p>
+          </div>
+          <div class="imagen-mentoria-soluciones">
+            <img class="imagenFormulario" src="/assets/learnskills.jpg" alt="Aprendiendo habilidades">
+          </div>
+        </div>
+        <p class="p-final">Empieza a enseñar lo que te gusta.</p>
+        <a class="a-final" href="#contactForm" >¡REGÍSTRATE AHORA!</a>
       </article>
     </section>
   </main>
@@ -367,12 +372,12 @@
       <section class="redes">
           <h2>siguenos en nuestras redes sociales</h2>
           <article class="icon-footer">
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-instagram"></i></a>
-              <a href="#"><i class="bi bi-threads"></i></a>
-              <a href="#"><i class="bi bi-github"></i></a>
-              <a href="#"><i class="bi bi-twitter-x"></i></a>
-      </article>
+              <a class="iconos" href="#"><i class="bi bi-facebook"></i></a>
+              <a class="iconos" href="#"><i class="bi bi-instagram"></i></a>
+              <a class="iconos" href="#"><i class="bi bi-threads"></i></a>
+              <a class="iconos" href="#"><i class="bi bi-github"></i></a>
+              <a class="iconos" href="#"><i class="bi bi-twitter-x"></i></a>
+            </article>
       </section>
     </footer>
     <script src="/js/formulario-Registro.js"></script>

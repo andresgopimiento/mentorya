@@ -196,7 +196,7 @@ footer {
   
 }
 
-li{
+li {
   /* Estilos para la sección "Sobre nosotros" */
   list-style-type: none; 
 }
@@ -219,11 +219,11 @@ li{
   /* box-shadow: ; */
 }
 
-a{
+.a{
   color: rgb(12, 12, 12);
   text-decoration: none;
 }
-a:hover{
+article a:hover{
   color: rgb(49, 15, 201);
   font-size: 20px;
 }

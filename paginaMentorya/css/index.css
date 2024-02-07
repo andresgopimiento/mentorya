@@ -7,9 +7,11 @@
   padding: 0;
 }
 html{
+  background: var(--main-bg-color);
+}
+main{
   background: rgb(33,47,69);
   background: linear-gradient(0deg, rgba(33,47,69,0.9248074229691877) 35%, rgba(62,31,71,1) 100%) ;
-  height: 100vh;
 }
 :root {
   --main-bg-color: #3E1F47;
@@ -149,12 +151,6 @@ main div .introduccion {
   padding: 3rem;
   
 }
-
-hr {
-  padding: 0;
-  margin: 0;
-}
-
 /*Inicio de Misión y visión*/
 
 section .cajaDescripcion,
