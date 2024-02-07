@@ -121,7 +121,9 @@ img.logo:hover{
   display: none;
 }
 /*-----------------login------------------*/
-
+.main{
+  height: 95vh;
+}
 .formulario{
   margin-top: 5%;
   position: absolute;
