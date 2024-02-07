@@ -18,7 +18,6 @@ main{
   --main-cont-color: #ECFDFE;
   --main-bgd-color: #212F45;
 }
-/*CSS de Joan - Barra de NAvegación*/
 img.logo {
   border-radius: 50%;
   height: 35px;
@@ -81,6 +80,49 @@ img.logo:hover{
 .color-a{
   color: var(--main-cont-color) !important;
 }
+@media (max-width: 762px) {
+  .abrir_menu,
+  .cerrar_menu {
+    display: block;
+    border: 0;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(100, 19, 138);
+    box-shadow: 0 0 0 100vmax rgba(236, 236, 236, 0.5);
+  }
+
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav_list {
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .nav_list li a {
+    text-decoration: none;
+    color: whitesmoke;
+  }
+}
+
+.abrir_menu,
+.cerrar_menu {
+  display: none;
+}
 
 /*-----------CAJA INTRODUCCIÓN-----------*/
 
@@ -92,27 +134,23 @@ img.logo:hover{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  filter: blur(5px);
-
+  opacity: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.cajaIntroduccion:hover {
-  filter: blur(0px);
+.cajaIntroduccion p {
+  font-size: 60px;
+  background-color: rgba(100, 19, 138, 0.6306897759103641);
+  color: white;
 }
+
 
 main div .introduccion {
   font-size: 60px;
   padding: 3rem;
+  
 }
-
-hr {
-  padding: 0;
-  margin: 0;
-}
-
 /*Inicio de Misión y visión*/
 
 section .cajaDescripcion,
@@ -127,15 +165,42 @@ section .cajaDescripcion,
 }
 
 section .parrafoDescripcionMisionVision h3,
-h2 {
-  text-align: center;
+section .parrafoDescripcionMisionVision h2 {
+  text-align: center; 
+  background-color: #3e1f47;
+  opacity: 1.8; 
+}
+
+section .parrafoDescripcionMisionVision h3::after,
+section .parrafoDescripcionMisionVision h2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background-color: inherit;
+  filter: blur(25px);
+  z-index: -1;
 }
 
 section .parrafoDescripcionMisionVision {
   text-align: justify;
   font-size: 30px;
   max-width: 80%;
+  filter: contrast(120%);
 }
+
+
+
+.resaltado1 {
+  background-color: rgb(100, 19, 138);
+}
+.resaltado2 {
+  opacity: 150%;
+}
+
 
 /*Tamaño de las imágenes*/
 
@@ -150,10 +215,12 @@ section .cajaImagenesDescripcionMisionVision {
 section .imagenesDescripcionMisionVision {
   width: 400px;
   border-radius: 15%;
-  border: 8px solid #212f45;
+  border-bottom-right-radius: 25%;
+  border-top-left-radius: 25%;
+  border-style: groove;
   padding: 0;
   margin: 0;
-  width: 100%;
+  width: 90%;
 }
 
 /* ------------------------------------Articulo imagenes del equipo-------------------------------------------------*/
@@ -362,7 +429,7 @@ img {
     margin: 0;
   }
 
-  /*Inicio de Misión y visión*/
+  /*----CONTENIDO DE LA PÁGINA-----*/
 
   section .cajaDescripcion,
   .cajaMision,

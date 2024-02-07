@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,700;1,100;1,700;1,900&display=swap");
-
 * {
   box-sizing: border-box;
   font-family: "Kulim Park", sans-serif;
@@ -82,7 +81,6 @@ img.logo:hover{
 .color-a{
   color: var(--main-cont-color) !important;
 }
-
 @media (max-width: 762px) {
   .abrir_menu,
   .cerrar_menu {
@@ -121,38 +119,6 @@ img.logo:hover{
     color: whitesmoke;
   }
 }
-
-/*--------------CONTENIDO--------------*/
-
-#contenido {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contenedor-productos {
-    display: flex;
-    width: 90vw;
-    height: 100vh;
-    flex-wrap: wrap;
-    background-color:aquamarine;
-    justify-content: space-around;
-}
-
-.Productos-card {
-    background-color: aqua;
-    color: black;
-    width: 400px;
-    height: 300px;
-    padding: 2rem;
-}
-
-
-
-/*--------FOOTER--------------*/
-
 footer {
   display: flex;
   flex-direction: row;
