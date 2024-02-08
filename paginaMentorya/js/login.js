@@ -1,12 +1,18 @@
-const nav = document.querySelector("#nav");
-const abrir = document.querySelector("#abrir");
-const cerrar = document.querySelector("#cerrar");
+const form = document.getElementById('formulario');
 
-abrir.addEventListener("click",() => {
-    nav.classList.add("visible");
-})
+form.addEventListener('submit', (e)=>{
+    e.preventDefault();
 
-cerrar.addEventListener("click",() => {
-    nav.classList.remove("visible");
+    const name = document.getElementById('name').value;
+    const password = document.getElementById('password').value;
 
+    const Users = JSON.parse(localStorage.getItem('comusers'))||[];
+    const isUserRegistered = Users.find(comusers => comusers.password == password && comusers.name == name);
+    const usuario = JSON.parse(localStorage.getItem('comusers.name'))
+    if (isUserRegistered) {
+        alert (`Bienvenido ${isUserRegistered.name}`);
+        window.location.href = 'productos.html';
+    } else {
+        alert("El usuario no se encuentra registrado o el usuario no coincide con la contraseña");
+    }
 })

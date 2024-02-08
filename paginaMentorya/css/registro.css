@@ -17,6 +17,7 @@ main{
   --main-bg-color: #3E1F47;
   --main-cont-color: #ECFDFE;
   --main-bgd-color: #212F45;
+  --colorTextos:#49454567;
 }
 /*CSS de Joan - Barra de NAvegación*/
 img.logo {
@@ -81,73 +82,28 @@ img.logo:hover{
 .color-a{
   color: var(--main-cont-color) !important;
 }
-@media (max-width: 762px) {
-  .abrir_menu,
-  .cerrar_menu {
-    display: block;
-    border: 0;
-    font-size: 2rem;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  .nav {
-    opacity: 0;
-    visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgb(100, 19, 138);
-    box-shadow: 0 0 0 100vmax rgba(236, 236, 236, 0.5);
-  }
-
-  .nav.visible {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .nav_list {
-    flex-direction: column;
-    align-items: end;
-  }
-
-  .nav_list li a {
-    text-decoration: none;
-    color: whitesmoke;
-  }
-}
-
 /* ------------------formulario registro------------------------ */
-
-:root{
-  --colorTextos:#49454567;
-}
-
-
 main{
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'roboto';
-  background: -webkit-linear-gradient(to right,  rgba(33,47,69,0.9248074229691877) 35%, rgba(62,31,71,1) 100%);
-  background: linear-gradient(to right,  rgba(33,47,69,0.9248074229691877) 35%, rgba(62,31,71,1) 100%);
   height: 100vh;
 }
 
-h1{
+.h1{
   text-align: center;
   font-weight: 700;
+  font-size: 25px;
 }
 
 form{
   background: #fff;
-  padding: 40px 0;
+  padding: 20px 0;
   box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
   border-radius: 10px;
-  width: 500px;
+  width: 350px;
+  height: 400px;
 }
 
 .form{
@@ -155,23 +111,24 @@ form{
   margin: auto;
 }
 
-form .grupo{
+.grupo{
   position: relative;
-  margin: 45px;
+  margin: 30px 30px;
 }
 
-input{
+.input{
   background: none;
   color: #c6c6c6;
   font-size: 18px;
   padding: 10px 10px 10px 5px;
   display: block;
   width: 100%;
+  height: 30px;
   border: none;
   border-bottom: 1px solid var(--colorTextos);
 }
 
-input:focus{
+.input:focus{
   outline: none;
   color: #5e5d5d;
 }
@@ -186,8 +143,8 @@ label{
   pointer-events: none;
 }
 
-input:focus~label,
-input:valid~label{
+.input:focus~label,
+.input:valid~label{
   top:-14px;
   font-size: 14px;
   color:#2196f3
@@ -210,11 +167,11 @@ input:valid~label{
   left: 0;
 }
 
-input:focus~.barra::before{
+.input:focus~.barra::before{
   width: 100%;
 }
 
-button{
+.boton-reg{
   font-family: 'roboto';
   background: #4568DC;
   background: -webkit-linear-gradient(to right, #B06AB3,#4568DC);
@@ -337,5 +294,47 @@ article a:hover{
       align-items: center;
       justify-content:space-around;
       padding: 2rem;
+    }
+}
+@media (max-width: 762px) {
+  .abrir_menu,
+  .cerrar_menu {
+    display: block;
+    border: 0;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--main-cont-color);
+  }
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--main-bgd-color);
+    box-shadow: 0 0 0 100vmax rgba(236, 236, 236, 0.5);
+    padding: 20px;
+  }
+  .nav.visible {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 1;
+    visibility: visible;
+    }
+  
+    .nav_list {
+      align-items: center;
+      flex-direction: column;
+      align-items: end;
+    }
+  
+    .nav_list li a {
+      text-decoration: none;
     }
 }
