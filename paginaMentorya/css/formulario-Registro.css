@@ -123,6 +123,7 @@ img.logo:hover{
     gap: 20px;
     border: 1px solid var(--main-bgd-color);
     box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.5);
+    color: var(--main-cont-color);
 }
 .Contenedor-inputs{
   display: flex;
@@ -185,6 +186,7 @@ img.logo:hover{
   border-radius: 10px;
   border: 1px solid black;
   color: white;
+  cursor: pointer;
 }
 .sectionImagenFormulario {
   width: 40%;
@@ -256,6 +258,7 @@ img.logo:hover{
   align-items: center;
   justify-content: center;
   padding: 20px;
+  width: 50%;
 }
 .parrafos-mentoria mark{
   background-color: var(--main-bgd-color);
@@ -265,7 +268,7 @@ img.logo:hover{
 
 }
 .imagen-mentoria-soluciones {
-  width: 70%;
+  width: 50%;
 }
 
 /*----FIN DE CONTENIDO----*/
