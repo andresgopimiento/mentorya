@@ -13,46 +13,44 @@
 <!-----👁️ ENCABEZADO DE PÁGINA------>
   </head>
   <body>
-    <header>
-      <img class="logo" src="/assets/Logo-Mentorya[1].svg" alt="logo" />
-      <!-- Inicio de botones para MediaQuerys -->
+    <header class="header">
+      <img class="logo" src="/assets/Logo-Mentorya[1].svg" alt="logo">
       <button id="abrir" class="abrir_menu"><i class="bi bi-list"></i></button>
-      <nav class="nav" id="nav">
-        <button id="cerrar" class="cerrar_menu">
-          <i class="bi bi-x-lg"></i>
-        </button>
-        <ul class="nav_list">
-          <li><a href="/index.html">Inicio</a></li>
-          <li><a href="/pages/nosotros.html">Nosotros</a></li>
-          <li><a href="/pages/registro.html">Registro</a></li>
-          <li><a href="/pages/login.html">Login</a></li>
-        </ul>
+  
+      <nav class="nav" id="nav"> 
+          <button id="cerrar" class="cerrar_menu"><i class="bi bi-x-lg"></i></button>
+          <ul class="nav_list">
+              <li class="contenedor-li"><a  href="/index.html">Inicio</a></li>
+              <li class="contenedor-li"><a  href="/pages/registro.html">Contacto</a></li>
+              <li class="contenedor-li"><a  href="/pages/nosotros.html">Nosotros</a></li>
+              <li class="contenedor-li back-logo"><a  href="/pages/login.html" class="color-a">Login</a></li>
+          </ul>
       </nav>
     </header>
 
 
 <!-----👁️ CONTENIDO DE PÁGINA------>
     <main class="contenido">
-
       <section class="formularioEImagen">
         <article class="registroVendedores">
 
 <!--  ---👁️ FORMULARIO---- -->
           <form class="form" id="contactForm">
-            <h3>Registro</h3>
+            <h3>Registro Mentores</h3>
+            <div class="Contenedor-inputs">
             <div class="cajaCampos">
               <label for="name">Nombres</label> 
-                <input type="text" name="name" id="name" placeholder="Nombres" required/>
+                <input type="text" name="name" id="name" placeholder="Ej: Juan" required/>
             </div>      
 
             <div class="cajaCampos"> 
               <label for="lastName">Apellidos</label>
-                <input type="text" name="lastName" id="lastName" placeholder="Apellidos" required/>
+                <input type="text" name="lastName" id="lastName" placeholder="Ej: Gonzales Perez" required/>
             </div>
 
             <div class="cajaCampos">
               <label for="email">Correo Electrónico</label>
-                <input type="email" name="email" id="email" placeholder="Escribir email" required/>
+                <input type="email" name="email" id="email" placeholder="Ej: juan@gmail.com" required/>
             </div>
 
           <div class="cajaCampos">
@@ -62,98 +60,20 @@
 
           <!-- Acá se colocan todos los países extraídos de una lista, para la nacionalidad. -->
           <div class="cajaCampos">
-            <label for="country">País:</label>
-            <select id="country" name="country" required>
+            <label for="pais">País:</label>
+            <select id="pais" name="pais" required>
             <option value="" disabled selected>Selecciona un país</option>
-            <option value="AF">Afganistán</option>
-            <option value="AL">Albania</option>
-            <option value="DE">Alemania</option>
-            <option value="AD">Andorra</option>
-            <option value="AO">Angola</option>
-            <option value="AI">Anguilla</option>
-            <option value="AQ">Antártida</option>
-            <option value="AG">Antigua y Barbuda</option>
-            <option value="AN">Antillas Holandesas</option>
-            <option value="SA">Arabia Saudí</option>
-            <option value="DZ">Argelia</option>
             <option value="AR">Argentina</option>
-            <option value="AM">Armenia</option>
-            <option value="AW">Aruba</option>
-            <option value="AU">Australia</option>
-            <option value="AT">Austria</option>
-            <option value="AZ">Azerbaiyán</option>
-            <option value="BS">Bahamas</option>
-            <option value="BH">Bahrein</option>
-            <option value="BD">Bangladesh</option>
-            <option value="BB">Barbados</option>
-            <option value="BE">Bélgica</option>
-            <option value="BZ">Belice</option>
-            <option value="BJ">Benin</option>
-            <option value="BM">Bermudas</option>
-            <option value="BY">Bielorrusia</option>
-            <option value="MM">Birmania</option>
             <option value="BO">Bolivia</option>
-            <option value="BA">Bosnia y Herzegovina</option>
-            <option value="BW">Botswana</option>
             <option value="BR">Brasil</option>
-            <option value="BN">Brunei</option>
-            <option value="BG">Bulgaria</option>
-            <option value="BF">Burkina Faso</option>
-            <option value="BI">Burundi</option>
-            <option value="BT">Bután</option>
-            <option value="CV">Cabo Verde</option>
-            <option value="KH">Camboya</option>
-            <option value="CM">Camerún</option>
-            <option value="CA">Canadá</option>
-            <option value="TD">Chad</option>
             <option value="CL">Chile</option>
-            <option value="CN">China</option>
-            <option value="CY">Chipre</option>
-            <option value="VA">Ciudad del Vaticano (Santa Sede)</option>
             <option value="CO">Colombia</option>
-            <option value="KM">Comores</option>
-            <option value="CG">Congo</option>
-            <option value="CD">Congo, República Democrática del</option>
-            <option value="KR">Corea</option>
-            <option value="KP">Corea del Norte</option>
-            <option value="CI">Costa de Marfíl</option>
             <option value="CR">Costa Rica</option>
-            <option value="HR">Croacia (Hrvatska)</option>
             <option value="CU">Cuba</option>
-            <option value="DK">Dinamarca</option>
-            <option value="DJ">Djibouti</option>
-            <option value="DM">Dominica</option>
             <option value="EC">Ecuador</option>
-            <option value="EG">Egipto</option>
             <option value="SV">El Salvador</option>
-            <option value="AE">Emiratos Árabes Unidos</option>
-            <option value="ER">Eritrea</option>
-            <option value="SI">Eslovenia</option>
             <option value="ES" selected>España</option>
-            <option value="US">Estados Unidos</option>
-            <option value="EE">Estonia</option>
-            <option value="ET">Etiopía</option>
-            <option value="FJ">Fiji</option>
-            <option value="PH">Filipinas</option>
-            <option value="FI">Finlandia</option>
-            <option value="FR">Francia</option>
-            <option value="GA">Gabón</option>
-            <option value="GM">Gambia</option>
-            <option value="GE">Georgia</option>
-            <option value="GH">Ghana</option>
-            <option value="GI">Gibraltar</option>
-            <option value="GD">Granada</option>
-            <option value="GR">Grecia</option>
-            <option value="GL">Groenlandia</option>
-            <option value="GP">Guadalupe</option>
-            <option value="GU">Guam</option>
             <option value="GT">Guatemala</option>
-            <option value="GY">Guayana</option>
-            <option value="GF">Guayana Francesa</option>
-            <option value="GN">Guinea</option>
-            <option value="GQ">Guinea Ecuatorial</option>
-            <option value="GW">Guinea-Bissau</option>
-            <option value="HT">Haití</option>
             <option value="HN">Honduras</option>
             <option value="HU">Hungría</option>
             <option value="IN">India</option>
@@ -303,8 +223,8 @@
           </div>
 
           <div class="cajaCampos">
-            <label for="city">Ciudad</label>
-            <select id="city" name="city" required>
+            <label for="ciudad">Ciudad</label>
+            <select id="ciudad" name="ciudad" required>
               <option value="" disabled selected>Selecciona una Ciudad </option>
               <option value="AF">Afganistán</option>
               <option value="AL">Albania</option>
@@ -313,20 +233,22 @@
           </div>
 
           <div class="cajaCampos">
-            <label for="email">Teléfono</label>
-              <input type="tel" name="email" id="email" placeholder="Número de teléfono" pattern=   "\([0-9]{3}\) [0-9]{3}[ -][0-9]{4}" required/>
+            <label for="tel">Teléfono</label>
+              <input type="tel" name="tel" id="tel" placeholder="Número de teléfono" required/>
           </div>
-
+<!-- pattern= "\([0-9]{3}\) [0-9]{3}[ -][0-9]{4}" -->
           <div class="cajaCampos">
-            <label for="email">Género</label>
-              <input type="" name="email" id="email" placeholder="Escribir email" required/>
+            <label for="gender">Género</label>
+              <input type="text" name="gender" id="gender" placeholder="Ej: Masculino" required/>
           </div>
-
           <div class="cajaCampos">
-            <label for="email">Profesión/Ocupación</label>
-              <input type="email" name="email" id="email" placeholder="Escribir email" required/>
+            <label for="profesion">Profesión/Ocupación</label>
+              <input type="text" name="profesion" id="profesion" placeholder="Ej: Abogado" required/>
           </div>
-          
+          <div class="cajaCampos btn">
+            <button type="submit">Registrar</button>
+          </div>
+        </div>
         </form>
       </article>
 
@@ -336,19 +258,21 @@
         </div>
       </article>
     </section>
-    <hr>
     <section>
       <article class="eleccion">
-        <mark><strong>¿Por qué escoger Mentorya?</strong></mark>
-        <p>¡Somos la plataforma top Latinoamérica, además somos <strong>¡Gratis!</strong></p>
-
-        <p>Te conectamos con alguien profesional en el <mark>área de tu interés</mark>, quién podrá ayudarte.</p>
-
-        <p>Sabemos lo <mark>difícil y tedioso</mark> que es encontrar alguien que te enseñe, eplique o solucione un tema en general.</p>
-
-        <img class="imagenFormulario" src="/assets/learnskills.jpg" alt="Aprendiendo habilidades">
-        <p>Empieza a buscar lo que te gusta.</p>
-        <a href="#contactForm" ><mark>¡REGÍSTRATE AHORA!</mark></a>
+        <strong>¿Por qué escoger Mentorya?</strong></mark>
+        <div class="contenedor-texto-mentoria">
+          <div class="parrafos-mentoria">
+            <p>¡Somos la plataforma mas top de Latinoamérica para enseñar!
+            Te conectamos con alguien que quiera aprender <mark>de tu experiencia.</mark>
+            Sabemos lo <mark>difícil y tedioso</mark> que es encontrar contenido de calidad y veridico online. Registrate <mark>AHORA</mark> para ayudarnos en nuestra mision de dar Mentoryas de alto Calidad!</p>
+          </div>
+          <div class="imagen-mentoria-soluciones">
+            <img class="imagenFormulario" src="/assets/learnskills.jpg" alt="Aprendiendo habilidades">
+          </div>
+        </div>
+        <p class="p-final">Empieza a enseñar lo que te gusta.</p>
+        <a class="a-final" href="#contactForm" >¡REGÍSTRATE AHORA!</a>
       </article>
     </section>
   </main>
@@ -367,15 +291,15 @@
       <section class="redes">
           <h2>siguenos en nuestras redes sociales</h2>
           <article class="icon-footer">
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-instagram"></i></a>
-              <a href="#"><i class="bi bi-threads"></i></a>
-              <a href="#"><i class="bi bi-github"></i></a>
-              <a href="#"><i class="bi bi-twitter-x"></i></a>
-      </article>
+              <a class="iconos" href="#"><i class="bi bi-facebook"></i></a>
+              <a class="iconos" href="#"><i class="bi bi-instagram"></i></a>
+              <a class="iconos" href="#"><i class="bi bi-threads"></i></a>
+              <a class="iconos" href="#"><i class="bi bi-github"></i></a>
+              <a class="iconos" href="#"><i class="bi bi-twitter-x"></i></a>
+            </article>
       </section>
     </footer>
-    <script src="/js/formulario-Registro.js"></script>
+    <script src="/js/registro-mentores.js"></script>
 </body>
 </html>
 
