@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
 }
-html{
+body{
   background: var(--main-bg-color);
 }
 main{
@@ -18,34 +18,37 @@ main{
   --main-cont-color: #ECFDFE;
   --main-bgd-color: #212F45;
 }
-/*CSS de Joan - Barra de NAvegación*/
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  backdrop-filter: blur(20px);
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 10px 50px;
+  border-radius: 0 0 20px 20px;
+}
+
 img.logo {
-  border-radius: 50%;
-  height: 35px;
-  width: 35px;
-  background-color: var(--main-cont-color);
+  height: 60px;
+  width: 60px;
   transition: all 1s ease-in-out;
 }
 
-header {
-  display: flex;
-  background-color: rgb(105, 20, 242);
-  align-items: center;
-  justify-content: space-between;
-  height: 40px;
-  padding: 10px;
-  border-radius: 0px 0px 10px 10px;
-}
+
 
 .nav_list {
   display: flex;
   list-style-type: none;
-  gap: 1rem;
+  gap: 2rem;
 }
 .nav_list li a {
   text-decoration: none;
-  color: black;
-  padding: 2rem;
+  text-transform: uppercase;
+  color: var(--main-cont-color);
+  font-size: .8rem;
 }
 .abrir_menu,
 .cerrar_menu {
@@ -55,17 +58,15 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 10px;
   font-weight: 600;
-  background-color: var(--main-cont-color);
-  border-radius: 10px;
-  border: solid 1.5px var(--main-bgd-color);
   text-align: center;
+  padding: 1rem 3rem;
   width: 100px;
   height: 25px;
 }
 .contenedor-li:hover{
-  transition: all 1s ease-in-out;
+  transition: all .3s ease-in-out;
+  border-bottom: 1.5px solid rgb(255, 55, 0) ;
   font-size: 12px;
 }
 img.logo:hover{
@@ -75,6 +76,9 @@ img.logo:hover{
   0% {transform: rotate(0deg);}
   100% {transform: rotate(360deg);}
 }
+
+
+
 .back-logo{
   background-color: rgb(255, 55, 0);
 }
