@@ -17,33 +17,39 @@ html{
   --main-cont-color: #ECFDFE;
   --main-bgd-color: #212F45;
 }
+
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 10px 50px;
+}
+
 img.logo {
-  border-radius: 50%;
-  height: 35px;
-  width: 35px;
-  background-color: var(--main-cont-color);
+  height: 60px;
+  width: 60px;
+  background-color: rgb(255, 55, 0) ;
+  border-radius: 10px;
   transition: all 1s ease-in-out;
 }
 
-header {
-  display: flex;
-  background-color: rgb(105, 20, 242);
-  align-items: center;
-  justify-content: space-between;
-  height: 40px;
-  padding: 10px;
-  border-radius: 0px 0px 10px 10px;
-}
+
 
 .nav_list {
   display: flex;
   list-style-type: none;
-  gap: 1rem;
+  gap: 2rem;
 }
 .nav_list li a {
   text-decoration: none;
-  color: black;
-  padding: 2rem;
+  text-transform: uppercase;
+  color: var(--main-bgd-color);
+  font-size: .8rem;
 }
 .abrir_menu,
 .cerrar_menu {
@@ -53,17 +59,15 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 10px;
   font-weight: 600;
-  background-color: var(--main-cont-color);
-  border-radius: 10px;
-  border: solid 1.5px var(--main-bgd-color);
   text-align: center;
+  padding: 1rem 3rem;
   width: 100px;
   height: 25px;
 }
 .contenedor-li:hover{
-  transition: all 1s ease-in-out;
+  transition: all .3s ease-in-out;
+  border-bottom: 1.5px solid rgb(255, 55, 0) ;
   font-size: 12px;
 }
 img.logo:hover{
@@ -73,6 +77,7 @@ img.logo:hover{
   0% {transform: rotate(0deg);}
   100% {transform: rotate(360deg);}
 }
+
 .back-logo{
   background-color: rgb(255, 55, 0);
 }
@@ -118,23 +123,20 @@ img.logo:hover{
   }
 }
 /*contacto DANIELA*/
+main{
+  display: flex;
+  justify-content: end;
+}
+
 .form {
-  background: linear-gradient(
-    180deg,
-    rgba(66, 43, 79, 0.97) 7%,
-    rgba(76, 43, 79, 0.72) 100%
-  );
+  background: #ffff;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   width: 35vw;
-  height: 70vh;
-  grid-column-start: 1;
-  grid-column-end: 1;
-  margin-left: 3vw;
-  padding: 20px;
-  border-radius: 20px;
+  gap: 1.5rem;
+  padding: 2rem 4rem;
 }
 .form label{
   font-weight: bold;
@@ -142,20 +144,28 @@ img.logo:hover{
 .form input,
 .form textarea,
 .form button {
-  width: 70%;
+  width: 100%;
+  border-radius: 2px;
   height: 36px;
-  margin: 20px auto;
-  border-radius: 10px;
   border: 1.5px solid #dc9d00;
-  font-size: 10px;
+  font-size: 14px;
   padding: 5px;
 }
+
+
+
 .form textarea {
   height: 10%;
 }
 .form button {
-  background-color: #d8bae0;
+  background-color: rgb(255, 55, 0);
+  color: #fff;
   font-weight: 600;
+  font-size: .8rem;
+}
+
+.form button:hover{
+    cursor: pointer;
 }
 
 .contacto {
@@ -163,9 +173,7 @@ img.logo:hover{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
-  height: 90vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  height: 100vh;
   place-content: center end;
 }
 
@@ -184,7 +192,7 @@ footer {
 }
 
 .logo-footer {
-  /* Estilos para la sección del logo */
+  /* Estilos para la secci贸n del logo */
   width: 7%;
   display: flex;
   flex-direction: column;
@@ -193,7 +201,7 @@ footer {
 }
 
 .sobre-nosotros {
-  /* Estilos para la sección "Sobre nosotros" */
+  /* Estilos para la secci贸n "Sobre nosotros" */
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -205,12 +213,12 @@ footer {
 }
 
 li{
-  /* Estilos para la sección "Sobre nosotros" */
+  /* Estilos para la secci贸n "Sobre nosotros" */
   list-style-type: none; 
 }
 
 .redes {
-  /* Estilos para la sección de redes sociales */
+  /* Estilos para la secci贸n de redes sociales */
   display: flex;
   flex-direction: column;
   padding: 1rem;

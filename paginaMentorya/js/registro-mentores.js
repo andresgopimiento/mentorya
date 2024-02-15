@@ -5,9 +5,9 @@ form.addEventListener('submit', (e)=>{
 
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
-  // const password = document.getElementById('password').value;
+  const password = document.getElementById('password').value;
   const pais = document.getElementById('pais').value;
-  const ciudad = document.getElementById('ciudad').value;
+  // const ciudad = document.getElementById('ciudad').value;
   const profesion = document.getElementById('profesion').value;
 
   const Users = JSON.parse(localStorage.getItem('users')) || [];
@@ -20,9 +20,8 @@ form.addEventListener('submit', (e)=>{
     Users.push({
       name: name,
       email: email,
-      // password: password,
+      password: password,
       pais: pais,
-      ciudad: ciudad,
       profesion: profesion,
     });
     localStorage.setItem('users', JSON.stringify(Users))

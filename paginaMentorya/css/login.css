@@ -16,33 +16,37 @@ html{
   --main-cont-color: #ECFDFE;
   --main-bgd-color: #212F45;
 }
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  backdrop-filter: blur(20px);
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 10px 50px;
+  border-radius: 0 0 20px 20px;
+}
+
 img.logo {
-  border-radius: 50%;
-  height: 35px;
-  width: 35px;
-  background-color: var(--main-cont-color);
+  height: 60px;
+  width: 60px;
   transition: all 1s ease-in-out;
 }
 
-header {
-  display: flex;
-  background-color: rgb(105, 20, 242);
-  align-items: center;
-  justify-content: space-between;
-  height: 40px;
-  padding: 10px;
-  border-radius: 0px 0px 10px 10px;
-}
+
 
 .nav_list {
   display: flex;
   list-style-type: none;
-  gap: 1rem;
+  gap: 2rem;
 }
 .nav_list li a {
   text-decoration: none;
-  color: black;
-  padding: 2rem;
+  text-transform: uppercase;
+  color: var(--main-cont-color);
+  font-size: .8rem;
 }
 .abrir_menu,
 .cerrar_menu {
@@ -52,17 +56,15 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 10px;
   font-weight: 600;
-  background-color: var(--main-cont-color);
-  border-radius: 10px;
-  border: solid 1.5px var(--main-bgd-color);
   text-align: center;
+  padding: 1rem 3rem;
   width: 100px;
   height: 25px;
 }
 .contenedor-li:hover{
-  transition: all 1s ease-in-out;
+  transition: all .3s ease-in-out;
+  border-bottom: 1.5px solid rgb(255, 55, 0) ;
   font-size: 12px;
 }
 img.logo:hover{
@@ -72,6 +74,14 @@ img.logo:hover{
   0% {transform: rotate(0deg);}
   100% {transform: rotate(360deg);}
 }
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 6rem;
+}
+
 .back-logo{
   background-color: rgb(255, 55, 0);
 }
@@ -79,106 +89,110 @@ img.logo:hover{
   color: var(--main-cont-color) !important;
 }
 /*-----------------login------------------*/
-.main{
-  height: 92vh;
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'roboto';
+  height: 100vh;
 }
-.formulario{
-  margin-top: 5%; 
-  position: absolute;
-  top:45%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  width: 350px;
-  background: whitesmoke;
+
+.h1{
+  text-align: center;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+form{
+  background: #fff;
+  padding: 20px 0;
+  box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
   border-radius: 10px;
-  padding-top: 20px;
+  width: 350px;
+  height: 400px;
 }
 
-.formulario h1{
-  text-align: center;
-  padding: 0 0 20px 0;
-  border-bottom: 1px solid silver;
+.form{
+  width: 100%;
+  margin: auto;
 }
 
-.formulario form{
-  padding: 0 40px;
-  box-sizing: border-box;
-}
-
-form .userName{
+.grupo{
   position: relative;
-  border-bottom:  2px solid #adadad;
-  margin: 30px 0;
+  margin: 30px 30px;
 }
-.userName input{
-  width: 100%;
-  padding: 0 5px;
-  height: 40px;
-  font-size:16px;
-  font-weight: bold;
-  border: none;
+
+.input{
   background: none;
-  outline: none;
-}
-
-.userName label{
-  position: absolute;
-  top: 50%;
-  left: 5px;
-  color: #adadad;
-  transform: translateY(-10%);
-  font-size: 16px;
-  pointer-events: none;
-  transition: .5s;
-}
-.userName input:focus ~ label,
-.userName input:focus ~ label{
-  top:-10px;
-  color: #6c3483;
-}
-.userName input:focus ~ span::before,
-.userName input:focus ~ span::before{
-  width: 100%;
-}
-
-.recordar{
-  margin: 5px 0 20px 5px;
-  font-weight: 600;
-  color: var(--main-bgd-color);
-  cursor: pointer;
-}
-
-.recordar:hover{
-  text-decoration: underline wavy var(--main-bgd-color);
-}
-input[type="submit"]{
-  width: 100%;
-  height: 40px;
-  border: 1px solid;
-  background: #6c3483;
+  color: #c6c6c6;
   font-size: 18px;
-  color: white;
-  cursor: pointer;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid var(--colorTextos);
+}
+
+.input:focus{
   outline: none;
-  font-weight: bold;
+  color: #5e5d5d;
 }
-input[type="submit"]:hover{
-  border-color: purple;
-  transition: .5s;
-  font-size: 20px;
-}
-.registro{
-  margin: 30px 0;
-  text-align: center;
+
+label{
+  color: var(--colorTextos);
   font-size: 16px;
-  color: black;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  transition: 0.5s ease-in-out all;
+  pointer-events: none;
 }
-.registro a{
-  color: var(--main-bg-color);
-  text-decoration: none;
+
+.input:focus~label,
+.input:valid~label{
+  top:-14px;
+  font-size: 14px;
+  color:#2196f3
 }
-.registro a:hover{
-  text-decoration: underline wavy var(--main-bgd-color);
+
+.barra{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #969696;
+}
+
+.barra::before{
+  content: "";
+  height: 2px;
+  width: 0%;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(to right, #B06AB3,#4568DC);
+  transition: 0.3S ease width;
+  left: 0;
+}
+
+.input:focus~.barra::before{
+  width: 100%;
+}
+
+.boton-reg{
+  font-family: 'roboto';
+  background: #4568DC;
+  background: -webkit-linear-gradient(to right, #B06AB3,#4568DC);
+  background: linear-gradient(to right, #B06AB3,#4568DC);
+  border: none;
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  color: #fff;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px;
 }
 /*---------FOOTER---------- */
 
@@ -195,7 +209,7 @@ footer {
 }
 
 .logo-footer {
-  /* Estilos para la sección del logo */
+  /* Estilos para la secci贸n del logo */
   width: 7%;
   display: flex;
   flex-direction: column;
@@ -204,7 +218,7 @@ footer {
 }
 
 .sobre-nosotros {
-  /* Estilos para la sección "Sobre nosotros" */
+  /* Estilos para la secci贸n "Sobre nosotros" */
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -216,12 +230,12 @@ footer {
 }
 
 li {
-  /* Estilos para la sección "Sobre nosotros" */
+  /* Estilos para la secci贸n "Sobre nosotros" */
   list-style-type: none; 
 }
 
 .redes {
-  /* Estilos para la sección de redes sociales */
+  /* Estilos para la secci贸n de redes sociales */
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -325,6 +339,3 @@ article a:hover{
     color: whitesmoke;
   }
 }
-
-
-

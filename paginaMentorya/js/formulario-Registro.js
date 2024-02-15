@@ -6,7 +6,6 @@ form.addEventListener('submit', (e)=>{
     const email = document.getElementById('email').value;
     const tel = document.getElementById('tel').value;
     const password = document.getElementById('password').value;
-
     const Users = JSON.parse(localStorage.getItem('comusers'))||[];
     const isComUserRegistered = Users.find(comusers => comusers.email === email);
 
