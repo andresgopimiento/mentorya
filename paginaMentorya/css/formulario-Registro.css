@@ -159,6 +159,7 @@ img.logo:hover{
 .cajaCampos input{
   font-size: 10px;
   width: 130px;
+  height: 25px;
   background-color: var(--main-cont-color);
   border: none;
   border-radius: 2px;
