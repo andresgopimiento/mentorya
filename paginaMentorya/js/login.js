@@ -8,8 +8,10 @@ form.addEventListener('submit', (e)=>{
 
     const Users = JSON.parse(localStorage.getItem('comusers'))||[];
     const isUserRegistered = Users.find(comusers => comusers.password == password && comusers.name == name);
-    const usuario = JSON.parse(localStorage.getItem('comusers.name'))
+    // const usuario = JSON.parse(localStorage.getItem('comusers.name'))
+    console.log(isUserRegistered);
     if (isUserRegistered) {
+        console.log(isUserRegistered);
         alert (`Bienvenido ${isUserRegistered.name}`);
         window.location.href = 'productos.html';
     } else {
