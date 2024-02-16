@@ -36,9 +36,9 @@ img.logo {
   width: 60px;
   transition: all 1s ease-in-out;
 }
-
-
-
+.contenedor-li.page{
+  border-bottom: 1px solid var(--main-bg-color);
+}
 .nav_list {
   display: flex;
   list-style-type: none;
