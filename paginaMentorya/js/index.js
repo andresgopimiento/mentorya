@@ -10,3 +10,7 @@ cerrar.addEventListener("click",() => {
     nav.classList.remove("visible");
 
 })
+
+
+/*INICIO DEL JS para el contenido de la página */
+
