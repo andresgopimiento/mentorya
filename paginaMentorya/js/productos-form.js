@@ -1,62 +1,91 @@
-// const container = document.getElementById('container')
 
+// const container = document.getElementById('container');
+// const select = document.getElementById('select-cate');
+// const producto = document.getElementsByClassName('contenedor_producto');
+
+// select.addEventListener('click', (e)=>{
+//     console.log(e.target.value);
+//     for (let i = 0; i < Users.length; i++) {
+//         if (e.target.value == Users[i].categoria) {
+//             producto.classList.add('filtro');
+//         }
+        
+//     }
+// })
 // let Users = JSON.parse(localStorage.getItem('users')) || [];
-//   for (i = 0; i<Users.length;i++){
-//     let hijo = document.createElement('div')
-//     hijo.classList.add('product')
-//     hijo.innerHTML = `
-//     <div class="contenedor_producto">
-//     <div class="contenedor_info">
-//       <div class="contenedor_img">
-//         <img src="https://svgsilh.com/svg/1633250.svg" alt="pepe" class="pepe">
-//       </div>
-//       <h5 class="nombre">${Users[i].name}</h5>
-//       <p class="pais">${Users[i].profesion}</p>
-//       <p class="email">${Users[i].pais}</p>
-//     </div>
-//     </div>
-//     `
-//     container.appendChild(hijo)
-//   }
+//     for (i = 0; i<Users.length;i++){
+//         let hijo = document.createElement('div')
+//         hijo.classList.add('product')
+//         hijo.innerHTML = `
+//         <div class="contenedor_producto">
+//         <div class="contenedor_info">
+//         <div class="contenedor_img">
+//             <img src="https://svgsilh.com/svg/1633250.svg" alt="pepe" class="pepe">
+//         </div>
+//         <h5 class="nombre">${Users[i].name}</h5>
+//         <p class="pais">${Users[i].profesion}</p>
+//         <p class="email">${Users[i].categoria}</p>
+//         </div>
+//         </div>
+//         `
+//         container.appendChild(hijo)
+//     }
 //   // Este codigo es el que imprime los mentores registrados - en la pagina de productos.
-// Obtén los elementos de entrada del filtro
-let selectCategoria = document.querySelector('#selectCategoria');
-let selectPais = document.querySelector('#selectPais');
-let checkboxDisponible = document.querySelector('#checkboxDisponible');
+// // Obtén los elementos de entrada del filtro
 
-// Agrega un evento de escucha a los elementos de entrada del filtro
-selectCategoria.addEventListener('change', filtrarYMostrarUsuarios);
-selectPais.addEventListener('change', filtrarYMostrarUsuarios);
-checkboxDisponible.addEventListener('change', filtrarYMostrarUsuarios);
 
-function filtrarYMostrarUsuarios() {
-    // Filtra los usuarios basándote en los valores de los elementos de entrada del filtro
-    let usuariosFiltrados = Users.filter(usuario => {
-        return (usuario.categoria === selectCategoria.value || selectCategoria.value === 'todos')
-            && (usuario.pais === selectPais.value || selectPais.value === 'todos')
-            && (!checkboxDisponible.checked || usuario.disponible);
+    const container = document.getElementById('container');
+    const select = document.getElementById('select-cate');
+    const selectP = document.getElementById('select-pais');
+    
+    select.addEventListener('change', (e)=>{
+        const selectedCategory = e.target.value;
+        renderUsers(selectedCategory,'categoria');
     });
-
-    // Muestra los usuarios filtrados
-    container.innerHTML = '';
-    usuariosFiltrados.forEach(usuario => {
-        let hijo = document.createElement('div');
-        hijo.classList.add('product');
-        hijo.innerHTML = `
-            <div class="contenedor_producto">
+    selectP.addEventListener('change', (e)=>{
+        const selectedCategory = e.target.value;
+        renderUsers(selectedCategory,'pais');
+    });
+    function renderUsers(filterCategory,propiedad) {
+        container.innerHTML = ''; // Limpiar el contenedor antes de renderizar los usuarios
+        let Users = JSON.parse(localStorage.getItem('users')) || [];
+        for (i = 0; i<Users.length;i++){
+            if (!filterCategory || Users[i][propiedad] === filterCategory) { // Filtrar por categoría si se proporciona una
+                let hijo = document.createElement('div')
+                hijo.classList.add('product')
+                hijo.innerHTML = `
+                <div class="contenedor_producto" id="contenedor-producto${Users[i]}">
                 <div class="contenedor_info">
-                    <div class="contenedor_img">
-                        <img src="https://svgsilh.com/svg/1633250.svg" alt="pepe" class="pepe">
-                    </div>
-                    <h5 class="nombre">${usuario.name}</h5>
-                    <p class="pais">${usuario.profesion}</p>
-                    <p class="email">${usuario.pais}</p>
+                <div class="contenedor_img">
+                    <img src="https://svgsilh.com/svg/1633250.svg" alt="pepe" class="pepe">
                 </div>
-            </div>
-        `;
-        container.appendChild(hijo);
-    });
-}
+                <h5 class="nombre">${Users[i].name}</h5>
+                <p class="pais">${Users[i].profesion}</p>
+                <p class="email">${Users[i].categoria}</p>
+                </div>
+                </div>
+                `
+                container.appendChild(hijo)
+                // const producto = document.
+            } else if(filterCategory === "todos"){
+                let hijo = document.createElement('div')
+                hijo.classList.add('product')
+                hijo.innerHTML = `
+                <div class="contenedor_producto">
+                <div class="contenedor_info">
+                <div class="contenedor_img">
+                    <img src="https://svgsilh.com/svg/1633250.svg" alt="pepe" class="pepe">
+                </div>
+                <h5 class="nombre">${Users[i].name}</h5>
+                <p class="pais">${Users[i].profesion}</p>
+                <p class="email">${Users[i].categoria}</p>
+                </div>
+                </div>
+                `
+                container.appendChild(hijo)
+            }
+        }
+    }
 
-// Llama a la función para mostrar todos los usuarios al principio
-filtrarYMostrarUsuarios();
+    renderUsers(); // Renderizar todos los usuarios al cargar la página
+

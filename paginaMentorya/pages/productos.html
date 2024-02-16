@@ -32,8 +32,9 @@
             <h1>Filtrar</h1>
             <div class="Contenedor__input">
               <label for="">Categoria</label>
-              <select class="input_filtro" name="select" id="select">
-                <option value="tecnologias">Tecnologia</option>
+              <select class="input_filtro" name="select" id="select-cate">
+                <option value="todos">Todos</option>
+                <option value="tecnologia">Tecnologia</option>
                 <option value="ciencias">Ciencias</option>
                 <option value="matematicas">Matematicas</option>
                 <option value="artes">Artes</option>
@@ -41,16 +42,22 @@
             </div>
             <div class="Contenedor__input">
               <label for="">Pais</label>
-              <select class="input_filtro" name="select" id="select">
-                <option value="Colombia">Colombia</option>
-                <option value="Mexico">Mexico</option>
-                <option value="Argentina">Argentina</option>
-                <option value="Uruguai">Uruguai</option>
-                <option value="Venezuela">Venezuela</option>
-                <option value="Brasil">Brasil</option>
+              <select class="input_filtro" name="select" id="select-pais">
+                <option value="todos">Todos</option>
+                <option value="AR">Argentina</option>
+                <option value="BO">Bolivia</option>
+                <option value="BR">Brasil</option>
+                <option value="CL">Chile</option>
+                <option value="CO" selected>Colombia</option>
+                <option value="CR">Costa Rica</option>
+                <option value="CU">Cuba</option>
+                <option value="EC">Ecuador</option>
+                <option value="SV">El Salvador</option>
+                <option value="ES" >España</option>
+                <option value="GT">Guatemala</option>
               </select>
             </div>
-            <div class="Contenedor__input">
+            <div class="Contenedor__input-check">
               <label for="">Disponible para Mentorya Plus</label>
               <input type="checkbox">
             </div>
