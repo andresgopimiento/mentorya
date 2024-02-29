@@ -37,7 +37,6 @@
     const container = document.getElementById('container');
     const select = document.getElementById('select-cate');
     const selectP = document.getElementById('select-pais');
-    
     select.addEventListener('change', (e)=>{
         const selectedCategory = e.target.value;
         renderUsers(selectedCategory,'categoria');
@@ -89,3 +88,8 @@
 
     renderUsers(); // Renderizar todos los usuarios al cargar la página
 
+    const contenedorMentor = document.querySelector(".contenedor_producto")
+    
+    contenedorMentor.addEventListener('click', (e)=> {
+        window.location.href = "perfil-mentor.html"
+    })

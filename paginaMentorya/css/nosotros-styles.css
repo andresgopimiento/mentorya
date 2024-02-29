@@ -97,7 +97,6 @@ img.logo:hover{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,14 +111,9 @@ main div .introduccion {
   font-size: 45px;
   padding: 3rem;
   background: linear-gradient(0deg, rgba(33,47,69,0.9248074229691877) 35%, rgba(62,31,71,1) 100%) ;
-  border-radius: 10%;
+  border-radius: 20px;
+  width: 70vw;
 }
-
-hr {
-  padding: 0;
-  margin: 0;
-}
-
 /*Inicio de Misión y visión*/
 
 section .cajaDescripcion,
@@ -156,7 +150,7 @@ section .cajaImagenesDescripcionMisionVision {
 
 section .imagenesDescripcionMisionVision {
   width: 400px;
-  border-radius: 15%;
+  border-radius: 15px;
   border: 8px solid #212f45;
   padding: 0;
   margin: 0;
@@ -234,6 +228,7 @@ section .imagenesDescripcionMisionVision {
   padding: 10px;
   border-radius: 0px 0px 10px 10px;
   margin-bottom: 2rem;
+  color: black;
 }
 .contenedor-galeria img {
   aspect-ratio: 3/4;
@@ -248,6 +243,7 @@ section .imagenesDescripcionMisionVision {
     rgba(244, 240, 240, 0.631) 100%
   );
   border-radius: 10px 10px 0px 0px;
+  color: black;
 }
 img {
   width: 100%;

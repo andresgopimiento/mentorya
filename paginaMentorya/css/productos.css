@@ -126,6 +126,8 @@ img.logo:hover {
   border-radius: 10px;
   line-height: 25px;
   animation:slide-filt-top .8s cubic-bezier(.25,.46,.45,.94) both;
+  position: relative;
+  z-index: 10;
 }
 @keyframes slide-filt-top{0%{transform:translateY(-100px)}100%{transform:translateY(0)}}
 .filtro__contenedor {
@@ -201,6 +203,9 @@ img.logo:hover {
   padding: 10px;
   border-radius: 10px;
   border: 1px solid var(--main-bg-color);
+  z-index: 10;
+  position: relative;
+  cursor: pointer;
 }
 .contenedor_info {
   display: flex;
@@ -245,6 +250,7 @@ footer {
   padding: 20px;
   color: rgb(8, 8, 8);
   position: relative;
+  z-index: 10;
 }
 
 .logo-footer {
@@ -291,7 +297,6 @@ li {
   align-items: center;
   justify-content: space-evenly;
   padding: 2rem;
-  /* box-shadow: ; */
 }
 
 .a {
@@ -380,6 +385,7 @@ article a:hover {
 /* ---------------- */
 #home-anim{
   position: fixed;
+  z-index: 1;
 }
 #home {
   clip-path: url(#cache);

@@ -13,22 +13,21 @@ cerrar.addEventListener("click",() => {
 
 // ------------------------------Script del slider del equipo---------------------------------------------
 let slider = document.querySelector('.contenedor-galeria');
-let img = document.querySelectorAll('img');
+let img = document.querySelectorAll('.img-container');
 const btnPrev = document.getElementById('prev-boton');
 const btnNext = document.getElementById('next-boton');
 
 
-let index = 1;
+let index = 0;
 btnNext.addEventListener('click',()=>{
-    let porcentaje = index*-100;
-    console.log(porcentaje);
-    slider.style.transform = `translateX(${porcentaje}%)`
     if (index < img.length -1){
         index++
+        let porcentaje = index*-100;
+        console.log(porcentaje);
+        slider.style.transform = `translateX(${porcentaje}%)`
     }
     })
     btnPrev.addEventListener('click',()=>{
-
     if (index > 0) {
         index--;
         let porcentaje = index * -100;
