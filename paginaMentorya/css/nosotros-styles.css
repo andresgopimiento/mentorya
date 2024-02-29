@@ -12,6 +12,7 @@ body{
 main{
   background: rgb(33,47,69);
   background: linear-gradient(0deg, rgba(33,47,69,0.9248074229691877) 35%, rgba(62,31,71,1) 100%) ;
+  color: white;
 }
 :root {
   --main-bg-color: #3E1F47;

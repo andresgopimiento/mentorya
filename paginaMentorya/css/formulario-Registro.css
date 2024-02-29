@@ -125,7 +125,6 @@ img.logo:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     border-radius: 15px;
     gap: 20px;
     border: 1px solid var(--main-bgd-color);

@@ -122,7 +122,6 @@ img.logo:hover{
     color: whitesmoke;
   }
 }
-/*contacto DANIELA*/
 main{
   display: flex;
   justify-content: end;
@@ -174,7 +173,6 @@ main{
   background-repeat: no-repeat;
   background-position: right;
   height: 100vh;
-  place-content: center end;
 }
 
 /* css del footer */
