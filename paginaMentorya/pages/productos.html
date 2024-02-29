@@ -4,85 +4,116 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="/css/productos.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/productos.css" />
   </head>
+
   <body>
     <header class="header">
-      <img class="logo" src="/assets/Logo-Mentorya-white.svg" alt="logo">
+      <img class="logo" src="/assets/Logo-Mentorya-white.svg" alt="logo" />
       <button id="abrir" class="abrir_menu"><i class="bi bi-list"></i></button>
-  
-      <nav class="nav" id="nav"> 
-          <button id="cerrar" class="cerrar_menu"><i class="bi bi-x-lg"></i></button>
-          <ul class="nav_list">
-              <li class="contenedor-li"><a  href="/index.html">Inicio</a></li>
-              <li class="contenedor-li"><a  href="/pages/contacto.html">Contacto</a></li>
-              <li class="contenedor-li"><a  href="/pages/formulario-Registro.html">Mentores</a></li>
-              <li class="contenedor-li back-logo"><a  href="/pages/login.html" class="color-a">Login</a></li>
-          </ul>
+
+      <nav class="nav" id="nav">
+        <button id="cerrar" class="cerrar_menu">
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <ul class="nav_list">
+          <li class="contenedor-li"><a href="/index.html">Inicio</a></li>
+          <li class="contenedor-li">
+            <a href="/pages/contacto.html">Contacto</a>
+          </li>
+          <li class="contenedor-li">
+            <a href="/pages/formulario-Registro.html">Mentores</a>
+          </li>
+          <li class="contenedor-li back-logo">
+            <a href="/pages/login.html" class="color-a">Login</a>
+          </li>
+        </ul>
       </nav>
-  </header>
+    </header>
     <main>
       <div class="contenido">
         <section class="contenido__filtro">
-          <div class="filtro__contenedor">
-            <h1>Filtrar</h1>
-            <div class="Contenedor__input">
-              <label for="">Categoria</label>
-              <select class="input_filtro" name="select" id="select-cate">
-                <option value="todos">Todos</option>
-                <option value="tecnologia">Tecnologia</option>
-                <option value="ciencias">Ciencias</option>
-                <option value="matematicas">Matematicas</option>
-                <option value="artes">Artes</option>
-              </select>
-            </div>
-            <div class="Contenedor__input">
-              <label for="">Pais</label>
-              <select class="input_filtro" name="select" id="select-pais">
-                <option value="todos">Todos</option>
-                <option value="AR">Argentina</option>
-                <option value="BO">Bolivia</option>
-                <option value="BR">Brasil</option>
-                <option value="CL">Chile</option>
-                <option value="CO" selected>Colombia</option>
-                <option value="CR">Costa Rica</option>
-                <option value="CU">Cuba</option>
-                <option value="EC">Ecuador</option>
-                <option value="SV">El Salvador</option>
-                <option value="ES" >España</option>
-                <option value="GT">Guatemala</option>
-              </select>
-            </div>
-            <div class="Contenedor__input-check">
-              <label for="">Disponible para Mentorya Plus</label>
-              <input type="checkbox">
-            </div>
+          <div class="filtro__main">
+            <h1>Bienvenido <br></h1><h2>
+              Estos son nuestros Mentores
+            </h2>
+            <p>Abajo puedes filtrar para que encuentres al Mentor que te ayudara a encontrar tu verdadero potencial</p>
           </div>
+            <div class="filtro__contenedor">
+              <h1>Filtrar</h1>
+              <div class="Contenedor__input">
+                <label for="">Categoria</label>
+                <select class="input_filtro" name="select" id="select-cate">
+                  <option value="todos">Todos</option>
+                  <option value="tecnologia">Tecnologia</option>
+                  <option value="ciencias">Ciencias</option>
+                  <option value="matematicas">Matematicas</option>
+                  <option value="artes">Artes</option>
+                </select>
+              </div>
+              <div class="Contenedor__input">
+                <label for="">Pais</label>
+                <select class="input_filtro" name="select" id="select-pais">
+                  <option value="todos">Todos</option>
+                  <option value="AR">Argentina</option>
+                  <option value="BO">Bolivia</option>
+                  <option value="BR">Brasil</option>
+                  <option value="CL">Chile</option>
+                  <option value="CO" selected>Colombia</option>
+                  <option value="CR">Costa Rica</option>
+                  <option value="CU">Cuba</option>
+                  <option value="EC">Ecuador</option>
+                  <option value="SV">El Salvador</option>
+                  <option value="ES">España</option>
+                  <option value="GT">Guatemala</option>
+                </select>
+              </div>
+              <div class="Contenedor__input-check">
+                <label for="">Disponible para Mentorya Plus</label>
+                <input type="checkbox" />
+              </div>
+            </div>
         </section>
-        <section id="container"class="container"></section>
+        <section id="container" class="container"></section>
       </div>
     </main>
     <footer>
-      <section class="logo-footer"><img src="/assets/Logo-Mentorya[1].svg" alt="logoMentorya"></section>
+      <section class="logo-footer">
+        <h1>Mentorya</h1>
+      </section>
       <section class="sobre-nosotros">
-          <h2>Bienvenidos</h2>
-            <li><a class="a"  href="/index.html">Inicio</a></li>
-            <li><a class="a"  href="/pages/contacto.html">Contacto</a></li>
-            <li><a class="a"  href="/pages/nosotros.html">Nosotros</a></li>
-            <li><a class="a"  href="/pages/formulario-Registro.html">Mentores</a></li>
+        <h2>Bienvenidos</h2>
+        <li><a class="a" href="/index.html">Inicio</a></li>
+        <li><a class="a" href="/pages/contacto.html">Contacto</a></li>
+        <li><a class="a" href="/pages/nosotros.html">Nosotros</a></li>
+        <li>
+          <a class="a" href="/pages/formulario-Registro.html">Mentores</a>
+        </li>
       </section>
       <section class="redes">
         <h2>siguenos en nuestras redes sociales</h2>
         <article class="icon-footer">
-              <a class="a" href="#"><i class="bi bi-facebook"></i></a>
-              <a class="a" href="#"><i class="bi bi-instagram"></i></a>
-              <a class="a" href="#"><i class="bi bi-threads"></i></a>
-              <a class="a" href="#"><i class="bi bi-github"></i></a>
-              <a class="a" href="#"><i class="bi bi-twitter-x"></i></a>
+          <a class="a" href="#"><i class="bi bi-facebook"></i></a>
+          <a class="a" href="#"><i class="bi bi-instagram"></i></a>
+          <a class="a" href="#"><i class="bi bi-threads"></i></a>
+          <a class="a" href="#"><i class="bi bi-github"></i></a>
+          <a class="a" href="#"><i class="bi bi-twitter-x"></i></a>
         </article>
       </section>
     </footer>

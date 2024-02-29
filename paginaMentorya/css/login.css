@@ -196,29 +196,36 @@ label{
 }
 /*---------FOOTER---------- */
 
+
 footer {
+  height: 13rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   align-content: center;
   align-items: center;
-  background-color: #dbbce4;
+  background-color: #ceedf8;
   padding: 20px;
   color: rgb(8, 8, 8);
 }
 
 .logo-footer {
-  /* Estilos para la secci贸n del logo */
+  /* Estilos para la sección del logo */
+  font-family: "Overpass";
+  font-weight: bold;
   width: 7%;
+  font-size: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+  margin-left: 80px;
+  text-shadow: -3px 3px 0px rgba(118,118,118,0.61);
 }
 
 .sobre-nosotros {
-  /* Estilos para la secci贸n "Sobre nosotros" */
+  /* Estilos para la sección "Sobre nosotros" */
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -226,37 +233,35 @@ footer {
   justify-content: space-around;
   align-items: center;
   padding: 1rem;
-  
 }
 
 li {
-  /* Estilos para la secci贸n "Sobre nosotros" */
-  list-style-type: none; 
+  /* Estilos para la sección "Sobre nosotros" */
+  list-style-type: none;
 }
 
 .redes {
-  /* Estilos para la secci贸n de redes sociales */
+  /* Estilos para la sección de redes sociales */
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  
 }
 
-.icon-footer{
+.icon-footer {
   height: 100px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   padding: 2rem;
   /* box-shadow: ; */
 }
 
-.a{
+.a {
   color: rgb(12, 12, 12);
   text-decoration: none;
 }
-article a:hover{
+article a:hover {
   color: rgb(49, 15, 201);
   font-size: 20px;
 }
