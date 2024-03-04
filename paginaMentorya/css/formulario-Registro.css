@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
 }
-html{
+body{
   background: var(--main-bg-color);
 }
 main{
@@ -18,33 +18,37 @@ main{
   --main-cont-color: #ECFDFE;
   --main-bgd-color: #212F45;
 }
-img.logo {
-  border-radius: 50%;
-  height: 35px;
-  width: 35px;
-  background-color: var(--main-cont-color);
-  transition: all 1s ease-in-out;
-}
-
 header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
   display: flex;
-  background-color: rgb(105, 20, 242);
+  backdrop-filter: blur(20px);
   align-items: center;
   justify-content: space-between;
-  height: 40px;
-  padding: 10px;
-  border-radius: 0px 0px 10px 10px;
+  height: 70px;
+  padding: 10px 50px;
+  border-radius: 0 0 20px 20px;
 }
 
+img.logo {
+  height: 60px;
+  width: 60px;
+  transition: all 1s ease-in-out;
+}
+.contenedor-li.page{
+  border-bottom: 1px solid var(--main-cont-color);
+}
 .nav_list {
   display: flex;
   list-style-type: none;
-  gap: 1rem;
+  gap: 2rem;
 }
 .nav_list li a {
   text-decoration: none;
-  color: black;
-  padding: 2rem;
+  text-transform: uppercase;
+  color: var(--main-cont-color);
+  font-size: .8rem;
 }
 .abrir_menu,
 .cerrar_menu {
@@ -54,17 +58,15 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 10px;
   font-weight: 600;
-  background-color: var(--main-cont-color);
-  border-radius: 10px;
-  border: solid 1.5px var(--main-bgd-color);
   text-align: center;
+  padding: 1rem 3rem;
   width: 100px;
   height: 25px;
 }
 .contenedor-li:hover{
-  transition: all 1s ease-in-out;
+  transition: all .3s ease-in-out;
+  border-bottom: 1.5px solid rgb(255, 55, 0) ;
   font-size: 12px;
 }
 img.logo:hover{
@@ -74,6 +76,9 @@ img.logo:hover{
   0% {transform: rotate(0deg);}
   100% {transform: rotate(360deg);}
 }
+
+
+
 .back-logo{
   background-color: rgb(255, 55, 0);
 }
@@ -105,6 +110,7 @@ img.logo:hover{
 }
 .registroVendedores{
   width: 50%;
+  height: 60%;
   padding: 20px;
 }
 .form{
@@ -113,12 +119,12 @@ img.logo:hover{
     rgba(31, 146, 223, 0.299) 7%,
     rgba(69, 91, 115, 0.72) 100%);
     width: 100%;
+    height: 100%;
     padding: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     border-radius: 15px;
     gap: 20px;
     border: 1px solid var(--main-bgd-color);
@@ -129,7 +135,7 @@ img.logo:hover{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   gap: 5px;
 }
@@ -138,12 +144,13 @@ img.logo:hover{
 }
 
 .cajaCampos {
-  width: 140px;
+  width: 150px;
   border: 1px solid rgb(3, 3, 3);
   font-size: 13px;
   border-radius: 8px;
   display: inline-block;
   padding: 5px;
+  color: black;
 }
 .cajaCampos label{
   color: rgb(248, 248, 248);
@@ -151,6 +158,7 @@ img.logo:hover{
 .cajaCampos input{
   font-size: 10px;
   width: 130px;
+  height: 25px;
   background-color: var(--main-cont-color);
   border: none;
   border-radius: 2px;
@@ -160,7 +168,7 @@ img.logo:hover{
   outline: none;
   margin-top: 3px;
   &::placeholder{
-    color: black;
+    color: gray;
   }
 }
 .cajaCampos input::after{
@@ -171,6 +179,7 @@ img.logo:hover{
   font-size: 10px;
   width: 130px;
   border-radius: 3px;
+  color: gray;
 }
 .cajaCampos.btn{
   display: flex;
@@ -182,7 +191,7 @@ img.logo:hover{
   width: 100px;
   height: 30px;
   font-weight: bold;
-  background-color: rgb(255, 55, 0);
+  background-color: var(--main-bg-color);
   border-radius: 10px;
   border: 1px solid black;
   color: white;
