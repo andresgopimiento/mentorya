@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -21,7 +22,7 @@ public class MentorController {
     @Autowired
     private IMentorService mentorService;
 
-    @GetMapping("/find/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<?> findById(@PathVariable Long id) {
         Optional<Mentor> mentorOptional = mentorService.findById(id);
 
@@ -31,6 +32,8 @@ public class MentorController {
                     .id(mentor.getId())
                     .firstName(mentor.getFirstName())
                     .lastName(mentor.getLastName())
+                    .gender(mentor.getGender())
+                    .country(mentor.getCountry())
                     .age(mentor.getAge())
                     .category(mentor.getCategory())
                     .occupation(mentor.getOccupation())
@@ -44,22 +47,24 @@ public class MentorController {
         return ResponseEntity.notFound().build();
     }
 
-//    @GetMapping("/findAll/")
-//    public ResponseEntity<?> findAll(){
-//        List<MentorDTO> mentorList = mentorService.findAll()
-//                .stream()
-//                .map(mentor -> MentorDTO.builder()
-//                        .id(mentor.getId())
-//                        .firstName(mentor.getFirstName())
-//                        .lastName(mentor.getLastName())
-//                        .age(mentor.getAge())
-//                        .category(mentor.getCategory())
-//                        .occupation(mentor.getOccupation())
-//                        .skills(mentor.getSkills())
-//                        .aboutMe(mentor.getAboutMe())
-//                        .productList(mentor.getProductList())
-//                    .build())
-//                .toList();
-//        return ResponseEntity.ok(mentorList);
-//    }
+    @GetMapping("/findAll")
+    public ResponseEntity<?> findAll(){
+        List<MentorDTO> mentorList = mentorService.findAll()
+                .stream()
+                .map(mentor -> MentorDTO.builder()
+                        .id(mentor.getId())
+                        .firstName(mentor.getFirstName())
+                        .lastName(mentor.getLastName())
+                        .gender(mentor.getGender())
+                        .country(mentor.getCountry())
+                        .age(mentor.getAge())
+                        .category(mentor.getCategory())
+                        .occupation(mentor.getOccupation())
+                        .skills(mentor.getSkills())
+                        .aboutMe(mentor.getAboutMe())
+                        .productList(mentor.getProductList())
+                    .build())
+                .toList();
+        return ResponseEntity.ok(mentorList);
+    }
 }

@@ -31,13 +31,19 @@ public class Mentor {
 
 
     //@Column sirve para llamar a la columna, en este caso llamada fisrtName, el nullable = false indica que no puede ser nulo, y length sería la longitud de ese campo, en este caso 25 cartacteres
-    @Column(nullable = false, length = 25)
+    @Column(nullable = false, length = 50)
     private String firstName;
 
-    @Column(nullable = false, length = 30)
+    @Column(nullable = false, length = 50)
     private String lastName;
 
-    @Column(nullable = false, unique = true, length = 50)
+    @Column(nullable = false, length = 30)
+    private String gender;
+
+    @Column(nullable = false, length = 30)
+    private String country;
+
+    @Column(nullable = false, unique = true, length = 80)
     private String email;
 
     @Column(nullable = false, unique = true, length = 20)
@@ -46,13 +52,13 @@ public class Mentor {
     @Column(nullable = false, length = 2)
     private Integer age;
 
-    @Column(nullable = false, length = 30)
+    @Column(nullable = false, length = 80)
     private String category;
 
-    @Column(nullable = false, length = 30)
+    @Column(nullable = false, length = 80)
     private String occupation;
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false, length = 80)
     private String skills;
 
     @Column(nullable = false, length = 1000)

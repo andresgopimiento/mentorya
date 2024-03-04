@@ -17,6 +17,8 @@ public class MentorDTO {
     private Long id;
     private String firstName;
     private String lastName;
+    private String gender;
+    private String country;
     private String email;
     private String phone;
     private Integer age;
