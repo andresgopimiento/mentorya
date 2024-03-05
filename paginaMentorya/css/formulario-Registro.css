@@ -95,9 +95,6 @@ img.logo:hover{
     flex-direction: column;
     flex-wrap: wrap;
 }
-
-
-
 /*-----INICIO DE FORMULARIO----*/
 .formularioEImagen {
   display: flex;
@@ -110,14 +107,15 @@ img.logo:hover{
 }
 .registroVendedores{
   width: 50%;
-  height: 60%;
+  height: 70%;
   padding: 20px;
 }
 .form{
-  background: linear-gradient(
-    180deg,
-    rgba(31, 146, 223, 0.299) 7%,
-    rgba(69, 91, 115, 0.72) 100%);
+  background: rgba(109, 109, 109, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
     width: 100%;
     height: 100%;
     padding: 25px;
@@ -127,28 +125,32 @@ img.logo:hover{
     align-items: center;
     border-radius: 15px;
     gap: 20px;
-    border: 1px solid var(--main-bgd-color);
     box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.5);
     color: var(--main-cont-color);
 }
 .Contenedor-inputs{
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   gap: 5px;
 }
 .form label {
   font-weight: bold;
+  font-size: 16px;
 }
 
 .cajaCampos {
-  width: 150px;
-  border: 1px solid rgb(3, 3, 3);
-  font-size: 13px;
+  width: 160px;
+  height: 70px;
+  font-size: 15px;
   border-radius: 8px;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   padding: 5px;
   color: black;
 }
@@ -156,9 +158,9 @@ img.logo:hover{
   color: rgb(248, 248, 248);
 }
 .cajaCampos input{
-  font-size: 10px;
+  font-size: 13px;
   width: 130px;
-  height: 25px;
+  height: 35px;
   background-color: var(--main-cont-color);
   border: none;
   border-radius: 2px;
@@ -176,7 +178,7 @@ img.logo:hover{
 }
 .cajaCampos select{
   background-color: var(--main-cont-color);
-  font-size: 10px;
+  font-size: 13px;
   width: 130px;
   border-radius: 3px;
   color: gray;
@@ -188,15 +190,17 @@ img.logo:hover{
   align-items: center;
 }
 .cajaCampos.btn button{
-  width: 100px;
-  height: 30px;
+  width: 150px;
+  height: 35px;
   font-weight: bold;
-  background-color: var(--main-bg-color);
+  background-color: rgb(255, 55, 0) ;
   border-radius: 10px;
-  border: 1px solid black;
+  border: none;
   color: white;
   cursor: pointer;
+  font-size: 20px;
 }
+
 .sectionImagenFormulario {
   width: 40%;
 }
@@ -228,6 +232,8 @@ img.logo:hover{
 }
 .eleccion strong {
   color: var(--main-cont-color);
+  font-size: 40px;
+  padding-bottom: 20px;
 }
 .p-final{
   padding: 10px;
@@ -248,6 +254,8 @@ img.logo:hover{
 .a-final:hover{
   text-decoration: none; 
   background-color: #3E1F47;
+  font-size: 30px;
+  color: var(--main-cont-color);
 }
 
 .contenedor-texto-mentoria{
@@ -268,13 +276,13 @@ img.logo:hover{
   justify-content: center;
   padding: 20px;
   width: 50%;
+  font-size: 25px;
 }
 .parrafos-mentoria mark{
   background-color: var(--main-bgd-color);
   color: var(--main-cont-color);
   font-weight: 600;
   padding: 0px 5px;
-
 }
 .imagen-mentoria-soluciones {
   width: 50%;
@@ -302,16 +310,63 @@ footer {
   /* Estilos para la sección del logo */
   font-family: "Overpass";
   font-weight: bold;
-  width: 7%;
+  width: 14rem;
+  height: 4rem;
   font-size: 30px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 1rem;
   margin-left: 80px;
   text-shadow: -3px 3px 0px rgba(118,118,118,0.61);
+  animation: animation-mentorya 2s ease 0s 1 normal both;
 }
+@keyframes animation-mentorya {
+  0% {
+	animation-timing-function: ease-in;
+	opacity: 1;
+	transform: translateY(-45px);
+  }
 
+  24% {
+	opacity: 1;
+  }
+
+  40% {
+	animation-timing-function: ease-in;
+	transform: translateY(-24px);
+  }
+
+  65% {
+	animation-timing-function: ease-in;
+	transform: translateY(-12px);
+  }
+
+  82% {
+	animation-timing-function: ease-in;
+	transform: translateY(-6px);
+  }
+
+  93% {
+	animation-timing-function: ease-in;
+	transform: translateY(-4px);
+  }
+
+  25%,
+  55%,
+  75%,
+  87% {
+	animation-timing-function: ease-out;
+	transform: translateY(0px);
+  }
+
+  100% {
+	animation-timing-function: ease-out;
+	opacity: 1;
+	transform: translateY(0px);
+  }
+}
 .sobre-nosotros {
   /* Estilos para la sección "Sobre nosotros" */
   height: 200px;

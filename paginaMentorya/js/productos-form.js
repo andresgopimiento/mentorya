@@ -1,95 +1,70 @@
+  const container = document.getElementById("container");
+  const select = document.getElementById("select-cate");
+  const selectP = document.getElementById("select-pais");
 
-// const container = document.getElementById('container');
-// const select = document.getElementById('select-cate');
-// const producto = document.getElementsByClassName('contenedor_producto');
+  select.addEventListener("change", (e) => {
+    const selectedCategory = e.target.value;
+    console.log(selectedCategory);
+    renderUsers(selectedCategory, "rubro");
+  });
 
-// select.addEventListener('click', (e)=>{
-//     console.log(e.target.value);
-//     for (let i = 0; i < Users.length; i++) {
-//         if (e.target.value == Users[i].categoria) {
-//             producto.classList.add('filtro');
-//         }
-        
-//     }
-// })
-// let Users = JSON.parse(localStorage.getItem('users')) || [];
-//     for (i = 0; i<Users.length;i++){
-//         let hijo = document.createElement('div')
-//         hijo.classList.add('product')
-//         hijo.innerHTML = `
-//         <div class="contenedor_producto">
-//         <div class="contenedor_info">
-//         <div class="contenedor_img">
-//             <img src="https://svgsilh.com/svg/1633250.svg" alt="pepe" class="pepe">
-//         </div>
-//         <h5 class="nombre">${Users[i].name}</h5>
-//         <p class="pais">${Users[i].profesion}</p>
-//         <p class="email">${Users[i].categoria}</p>
-//         </div>
-//         </div>
-//         `
-//         container.appendChild(hijo)
-//     }
-//   // Este codigo es el que imprime los mentores registrados - en la pagina de productos.
-// // Obtén los elementos de entrada del filtro
+  selectP.addEventListener("change", (e) => {
+    const selectedCategory = e.target.value;
+    renderUsers(selectedCategory, "paisMentor");
+  });
 
-
-    const container = document.getElementById('container');
-    const select = document.getElementById('select-cate');
-    const selectP = document.getElementById('select-pais');
-    select.addEventListener('change', (e)=>{
-        const selectedCategory = e.target.value;
-        renderUsers(selectedCategory,'categoria');
-    });
-    selectP.addEventListener('change', (e)=>{
-        const selectedCategory = e.target.value;
-        renderUsers(selectedCategory,'pais');
-    });
-    function renderUsers(filterCategory,propiedad) {
-        container.innerHTML = ''; // Limpiar el contenedor antes de renderizar los usuarios
-        let Users = JSON.parse(localStorage.getItem('users')) || [];
-        for (i = 0; i<Users.length;i++){
-            if (!filterCategory || Users[i][propiedad] === filterCategory) { // Filtrar por categoría si se proporciona una
-                let hijo = document.createElement('div')
-                hijo.classList.add('product')
-                hijo.innerHTML = `
-                <div class="contenedor_producto" id="contenedor-producto${Users[i]}">
-                <div class="contenedor_info">
-                <div class="contenedor_img">
-                    <img src="https://svgsilh.com/svg/1633250.svg" alt="pepe" class="pepe">
-                </div>
-                <h5 class="nombre">${Users[i].name}</h5>
-                <p class="pais">${Users[i].profesion}</p>
-                <p class="email">${Users[i].categoria}</p>
-                </div>
-                </div>
-                `
-                container.appendChild(hijo)
-                // const producto = document.
-            } else if(filterCategory === "todos"){
-                let hijo = document.createElement('div')
-                hijo.classList.add('product')
-                hijo.innerHTML = `
-                <div class="contenedor_producto">
-                <div class="contenedor_info">
-                <div class="contenedor_img">
-                    <img src="https://svgsilh.com/svg/1633250.svg" alt="pepe" class="pepe">
-                </div>
-                <h5 class="nombre">${Users[i].name}</h5>
-                <p class="pais">${Users[i].profesion}</p>
-                <p class="email">${Users[i].categoria}</p>
-                </div>
-                </div>
-                `
-                container.appendChild(hijo)
-            }
-        }
+  async function renderUsers(filterCategory, propiedad) {
+    container.innerHTML = "";
+    const url = "http://localhost:8080/api/v1/mentores";
+    let response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
+    let Users = await response.json();
+    for (i = 0; i < Users.length; i++) {
+      if (filterCategory === "todos") {
+        let hijo = document.createElement("div");
 
-    renderUsers(); // Renderizar todos los usuarios al cargar la página
-
-    const contenedorMentor = document.querySelector(".contenedor_producto")
-    
-    contenedorMentor.addEventListener('click', (e)=> {
-        window.location.href = "perfil-mentor.html"
-    })
+        hijo.classList.add("product");
+        hijo.innerHTML = `
+                  <div class="contenedor_producto">
+                  <div class="contenedor_info">
+                  <div class="contenedor_img">
+                      <img src="${Users[i].imagenMentor}" alt="pepe" class="pepe">
+                  </div>
+                  <a href="perfil-mentor.html?id=${Users[i].id}"class="nombre">${Users[i].nombreMentor}</a>
+                  <p class="pais">${Users[i].profesionMentor}</p>
+                  <p class="email">${Users[i].emailMentor}</p>
+                  </div>
+                  </div>
+                  `;
+        container.appendChild(hijo);
+      } else if (Users[i][propiedad] === filterCategory || Users[i].rubro.rubro === filterCategory) {
+        let hijo = document.createElement("div");
+        hijo.classList.add("product");
+        hijo.innerHTML = `
+                  <div class="contenedor_producto contenedor_producto${Users[i].id}">
+                  <div class="contenedor_info">
+                  <div class="contenedor_img">
+                      <img src=${Users[i].imagenMentor? Users[i].imagenMentor : "https://svgsilh.com/svg/1633250.svg"} alt="pepe" class="pepe">
+                  </div>
+                  <a href="perfil-mentor.html?id=${Users[i].id}"class="nombre">${Users[i].nombreMentor}</a>
+                  <p class="pais">${Users[i].profesionMentor}</p>
+                  <p class="email">${Users[i].emailMentor}</p>
+                  </div>
+                  </div>
+                  `;
+        container.appendChild(hijo);
+      }
+      // const contenedorMentor = document.querySelector(`.contenedor_producto${Users[i].id}`);
+      // console.log(contenedorMentor);
+      // if (contenedorMentor) {
+      //   contenedorMentor.addEventListener('click', (e) => {
+      //     window.location.href = `perfil-mentor.html?id=${Users[i].id}`
+      //   });
+      // }else {
+      //   console.log("noechite");
+      // }
+    }
+  }
+  renderUsers();

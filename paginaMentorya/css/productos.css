@@ -213,6 +213,10 @@ img.logo:hover {
   align-items: center;
   gap: 10px;
 }
+.contenedor_info a {
+  text-decoration: none;
+  color: var(--main-bgd-color);
+}
 .pepe {
   width: 70px;
   background-color: #cac8c8;
