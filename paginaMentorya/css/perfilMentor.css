@@ -129,6 +129,9 @@ img.logo:hover{
 }
 .perfil-img img{
   width: 200px;
+  border-radius: 100px;
+  object-fit: cover;
+  image-rendering: auto;
 }
 .perfil-info{
   margin-bottom: 2rem;
@@ -142,11 +145,6 @@ img.logo:hover{
 
 .ventas-servicios{
   display: flex;
-  /* background: rgba(255, 255, 255, 0.108);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px); */
   justify-content: space-around;
   height: 55%;
   align-items: center;
@@ -322,7 +320,41 @@ button {
     }
   }
 }
+#form {
+  width: 250px;
+  margin: 0 auto;
+  height: 50px;
+}
 
+#form p {
+  text-align: center;
+}
+
+#form label {
+  font-size: 20px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  color: grey;
+}
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label {
+  color: var(--main-bg-color);
+}
+
+input[type="radio"]:checked ~ label {
+  color: orange;
+}
 .video-titulo{
   text-align: center;
 }
