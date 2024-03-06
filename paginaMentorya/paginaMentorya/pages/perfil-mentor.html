@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/perfilMentor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <img class="logo" src="/assets/Logo-Mentorya-white.svg" alt="logo" />
+      <button id="abrir" class="abrir_menu"><i class="bi bi-list"></i></button>
+      <nav class="nav" id="nav">
+        <button id="cerrar" class="cerrar_menu">
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <ul class="nav_list">
+          <li class="contenedor-li"><a href="/index.html">Inicio</a></li>
+          <li class="contenedor-li">
+            <a href="/pages/contacto.html">Contacto</a>
+          </li>
+          <li class="contenedor-li page"><a href="#">Nosotros</a></li>
+          <li class="contenedor-li"
+          style="border-bottom: 1px solid orangered;">
+            <a href="/pages/productos.html">Mentores</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="container" class="container"></section>
+      <!-- <div class="main__container">
+        <section class="container__perfil">
+          <div class="perfil-img">
+            <strong>Nombre del Mentor</strong>
+            <img src="/assets/perfil-mentor.svg" alt="">
+          </div>
+          <div class="perfil-info">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, fugit minima. Ad veniam autem laudantium, dicta reiciendis quasi ab tenetur.</p>
+          </div>
+          <div class="perfil-data">
+            <strong>Doctor</strong>
+            <strong>info adicional</strong>
+          </div>
+        </section>
+        <section class="container__ventas">
+          <div class="ventas-servicios">
+            <div class="servicios">
+              <strong>habilidades</strong>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis ea dolorem rem quod nemo ducimus totam enim odit alias corrupti commodi, debitis, necessitatibus quo excepturi, sunt ad sint quia voluptatum! Quidem ab cumque perferendis magni, quos suscipit ipsam similique incidunt.</p>
+            </div>
+            <div class="datepicker">
+              <div class="datepicker-top">
+                <div class="btn-group">
+                  <button class="tag">Hoy</button>
+                  <button class="tag">Mañana</button>
+                  <button class="tag">En 2 dias</button>
+                </div>
+                <div class="month-selector">
+                  <button class="arrow"><i class="material-icons"><</i></button>
+                  <span class="month-name">Febrero 2024</span>
+                  <button class="arrow"><i class="material-icons">></i></button>
+                </div>
+              </div>
+              <div class="datepicker-calendar">
+                <span class="day">Mo</span>
+                <span class="day">Tu</span>
+                <span class="day">We</span>
+                <span class="day">Th</span>
+                <span class="day">Fr</span>
+                <span class="day">Sa</span>
+                <span class="day">Su</span>
+                <button class="date faded">30</button>
+                <button class="date">1</button>
+                <button class="date">2</button>
+                <button class="date">3</button>
+                <button class="date">4</button>
+                <button class="date">5</button>
+                <button class="date">6</button>
+                <button class="date">7</button>
+                <button class="date">8</button>
+                <button class="date current-day">9</button>
+                <button class="date">10</button>
+                <button class="date">11</button>
+                <button class="date">12</button>
+                <button class="date">13</button>
+                <button class="date">14</button>
+                <button class="date">15</button>
+                <button class="date">16</button>
+                <button class="date">17</button>
+                <button class="date">18</button>
+                <button class="date">19</button>
+                <button class="date">20</button>
+                <button class="date">21</button>
+                <button class="date">22</button>
+                <button class="date">23</button>
+                <button class="date">24</button>
+                <button class="date">25</button>
+                <button class="date">26</button>
+                <button class="date">27</button>
+                <button class="date">28</button>
+                <button class="date">29</button>
+                <button class="date">30</button>
+                <button class="date">31</button>
+                <button class="date faded">1</button>
+                <button class="date faded">2</button>
+                <button class="date faded">3</button>
+              </div>
+            </div>
+          </div>
+          <div class="ventas-videos">
+            <div class="videos-contenedor">
+              <iframe src="/videos/video-producto3.mp4" frameborder="0"></iframe>
+              <div class="video-titulo">
+                <strong> Titulo del video</strong>
+              </div>
+              <div class="video-precio">
+                <p>Acceso: <Strong>Gratis</Strong></p>
+                <strong>5<i class="fa-regular fa-star"></i></strong>
+              </div>
+            </div>
+            <div class="videos-contenedor">
+              <iframe src="/videos/video-producto2.mp4" frameborder="0"></iframe>
+              <div class="video-titulo">
+                <strong> Titulo del video</strong>
+              </div>
+              <div class="video-precio">
+                <p>Acceso: <Strong>Gratis</Strong></p>
+                <strong>5<i class="fa-regular fa-star"></i></strong>
+              </div>
+            </div>
+            <div class="videos-contenedor plus">
+              <iframe src="/videos/pexels-max-vakhtbovych-6771557 (1080p).mp4" frameborder="0"></iframe>
+              <div class="video-titulo">
+                <strong> Titulo del video</strong>
+              </div>
+              <div class="video-precio">
+                <p>Acceso: <Strong>MentoryaPlus</Strong></p>
+                <strong>5<i class="fa-regular fa-star"></i></strong>
+                <div class="block">
+                  <button class="btn-block" id="btn">Click para adquirir MentoryaPlus</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <section class="logo-footer">
+        <h1>Mentorya</h1>
+      </section>
+      <section class="sobre-nosotros">
+        <h2>Bienvenidos</h2>
+        <li><a class="a" href="/index.html">Inicio</a></li>
+        <li><a class="a" href="/pages/contacto.html">Contacto</a></li>
+        <li><a class="a" href="/pages/nosotros.html">Nosotros</a></li>
+        <li>
+          <a class="a" href="/pages/formulario-Registro.html">Mentores</a>
+        </li>
+      </section>
+      <section class="redes">
+        <h2>siguenos en nuestras redes sociales</h2>
+        <article class="icon-footer">
+          <a class="a" href="#"><i class="bi bi-facebook"></i></a>
+          <a class="a" href="#"><i class="bi bi-instagram"></i></a>
+          <a class="a" href="#"><i class="bi bi-threads"></i></a>
+          <a class="a" href="#"><i class="bi bi-github"></i></a>
+          <a class="a" href="#"><i class="bi bi-twitter-x"></i></a>
+        </article>
+      </section> -->
+    </footer>
+    <script type="module" src="/js/perfil-mentor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </body>
+</html>

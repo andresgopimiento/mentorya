@@ -1,0 +1,186 @@
+[
+  {
+      "id": 1,
+      "firstName": "Nicolás",
+      "lastName": "Molina",
+      "gender": "Femenino",
+      "country": "Argentina",
+      "email": null,
+      "phone": null,
+      "age": 35,
+      "category": "Tecnologia",
+      "occupation": "Arquitecta de Software",
+      "skills": "Java, Spring Boot, MongoDB",
+      "aboutMe": "Experta en desarrollo backend con enfoque en arquitecturas escalables y eficientes. Siempre dispuesto a guiar a nuevos desarrolladores en su aprendizaje.",
+      "photo": "https://scontent.feoh3-1.fna.fbcdn.net/v/t39.30808-6/425733258_874056418060763_3325467383048027710_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=_-oKhQTL2c0AX_WSPUa&_nc_ht=scontent.feoh3-1.fna&oh=00_AfC0yP7GS5UYtp9ECNubobw8kBjuMRXSN0DBbY1kTnRB7g&oe=65ED3B47",
+      "productList": [
+          {
+              "id": 1,
+              "name": "Desarrollo Backend",
+              "description": "Curso de Desarrollo Backend",
+              "price": 11000.00
+          }
+      ]
+  },
+  {
+      "id": 2,
+      "firstName": "Miguel Angel",
+      "lastName": "Durán",
+      "gender": "Femenino",
+      "country": "España",
+      "email": null,
+      "phone": null,
+      "age": 40,
+      "category": "Tecnologia",
+      "occupation": "Desarrollador Frontend Senior",
+      "skills": "JavaScript, React, CSS",
+      "aboutMe": "Ingeniera de software con más de 10 años de experiencia en desarrollo frontend. Me encanta compartir mis conocimientos y ayudar a otros a crecer en este campo.",
+      "photo": "https://pbs.twimg.com/profile_images/1613612257015128065/oA0Is67J_400x400.jpg",
+      "productList": [
+          {
+              "id": 2,
+              "name": "Desarrollo Frontend",
+              "description": "Curso de Desarrollo Frontend",
+              "price": 9500.00
+          }
+      ]
+  },
+  {
+      "id": 3,
+      "firstName": "Laura",
+      "lastName": "Hernández",
+      "gender": "Femenino",
+      "country": "Chile",
+      "email": null,
+      "phone": null,
+      "age": 38,
+      "category": "Bienestar",
+      "occupation": "Coach de Desarrollo Personal",
+      "skills": "Coaching Ejecutivo, Autoconfianza",
+      "aboutMe": "Coach profesional con enfoque en desarrollo personal y profesional. Mi objetivo es ayudarte a alcanzar tu máximo potencial.",
+      "photo": "https://cristinaramosvega.com/wp-content/uploads/2017/11/Empoderando-mujer-Agile-Women-Leydy-Carolina-Interior.jpg",
+      "productList": [
+          {
+              "id": 3,
+              "name": "Coaching Ejecutivo",
+              "description": "Coaching Ejecutivo",
+              "price": 9000.00
+          }
+      ]
+  },
+  {
+      "id": 4,
+      "firstName": "Felipe",
+      "lastName": "Vergara",
+      "gender": "Masculino",
+      "country": "Colombia",
+      "email": null,
+      "phone": null,
+      "age": 35,
+      "category": "Matemáticas",
+      "occupation": "Especialista en Matemáticas",
+      "skills": "Álgebra, Cálculo, Estadísticas",
+      "aboutMe": "Soy un mentor con amplia experiencia en matemáticas. Me apasiona enseñar y ayudar a otros a comprender conceptos matemáticos de manera clara y efectiva.",
+      "photo": "https://felipevergara.co/wp-content/uploads/Felipe-landing-mobile.png",
+      "productList": [
+          {
+              "id": 4,
+              "name": "Álgebra Avanzada",
+              "description": "Álgebra Avanzada",
+              "price": 8000.00
+          }
+      ]
+  },
+  {
+      "id": 5,
+      "firstName": "Carla",
+      "lastName": "Martínez",
+      "gender": "Masculino",
+      "country": "Perú",
+      "email": null,
+      "phone": null,
+      "age": 32,
+      "category": "Artes",
+      "occupation": "Artista y Diseñador",
+      "skills": "Ilustración, Diseño Gráfico, Pintura",
+      "aboutMe": "Apasionado por las artes y el diseño. Comprometido con inspirar creatividad y originalidad en cada proyecto. ¡Vamos a crear algo increíble juntos!",
+      "photo": "https://latinfemaledesigners.com/wp-content/uploads/2023/07/MariceliaMogollon.jpg",
+      "productList": [
+          {
+              "id": 5,
+              "name": "Ilustración",
+              "description": "Curso de Ilustración",
+              "price": 10000.00
+          }
+      ]
+  },
+  {
+      "id": 7,
+      "firstName": "Ana",
+      "lastName": "González",
+      "gender": "Femenino",
+      "country": "España",
+      "email": null,
+      "phone": null,
+      "age": 40,
+      "category": "Bienestar",
+      "occupation": "Coach de Bienestar",
+      "skills": "Mindfulness, Yoga, Consejería de Salud Mental",
+      "aboutMe": "Experta en bienestar y salud mental. Mi objetivo es guiar a las personas hacia una vida equilibrada y feliz. ¡Aprendamos juntos a cuidar de nuestra mente y cuerpo!",
+      "photo": "https://example.com/ana_gonzalez.jpg",
+      "productList": [
+          {
+              "id": 7,
+              "name": "Mindfulness y Yoga",
+              "description": "Mindfulness y Yoga",
+              "price": 9500.00
+          }
+      ]
+  },
+  {
+      "id": 8,
+      "firstName": "Carlos",
+      "lastName": "Sánchez",
+      "gender": "Masculino",
+      "country": "México",
+      "email": null,
+      "phone": null,
+      "age": 38,
+      "category": "Psicología",
+      "occupation": "Psicólogo Clínico",
+      "skills": "Terapia Cognitivo-Conductual, Consejería Familiar, Psicoterapia",
+      "aboutMe": "Psicólogo clínico con experiencia en terapia individual y familiar. Trabajo para proporcionar apoyo emocional y herramientas prácticas para el bienestar mental.",
+      "photo": "https://example.com/carlos_sanchez.jpg",
+      "productList": [
+          {
+              "id": 8,
+              "name": "Terapia Cognitivo-Conductual",
+              "description": "Terapia Cognitivo-Conductual",
+              "price": 8000.00
+          }
+      ]
+  },
+  {
+      "id": 9,
+      "firstName": "Luisa",
+      "lastName": "Rodríguez",
+      "gender": "Femenino",
+      "country": "Panama",
+      "email": null,
+      "phone": null,
+      "age": 28,
+      "category": "Idiomas",
+      "occupation": "Instructora de Idiomas",
+      "skills": "Inglés, Español, Francés",
+      "aboutMe": "Instructora de idiomas apasionada por facilitar el aprendizaje de nuevos idiomas. ¡Vamos a explorar juntos el mundo de los idiomas y la cultura!",
+      "photo": "https://example.com/luisa_rodriguez.jpg",
+      "productList": [
+          {
+              "id": 9,
+              "name": "Inglés Avanzado",
+              "description": "Curso de Inglés Avanzado",
+              "price": 10000.00
+          }
+      ]
+  }
+]

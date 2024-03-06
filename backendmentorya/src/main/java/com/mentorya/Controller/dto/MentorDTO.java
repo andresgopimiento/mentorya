@@ -26,6 +26,7 @@ public class MentorDTO {
     private String occupation;
     private String skills;
     private String aboutMe;
+    private String photo;
 
     private List<Product> productList = new ArrayList<>();
 }

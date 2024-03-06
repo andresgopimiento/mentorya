@@ -64,6 +64,8 @@ public class Mentor {
     @Column(nullable = false, length = 1000)
     private String aboutMe;
 
+    @Column(nullable = false, length = 500)
+    private String photo;
 
     //Una vez finalizados los campos personales de Mentores, acá empezaremos con la relación en la DB
 

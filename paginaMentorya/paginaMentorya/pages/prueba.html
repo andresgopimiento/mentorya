@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentor Detalles</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+<div id="mentorDetails"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  const mentorDetailsContainer = document.getElementById("mentorDetails");
+
+  // Obtener datos del mentor desde la API
+  try {
+    const response = await axios.get("http://localhost:8080/api/mentor/1");
+    const mentorData = response.data;
+
+    // Construir la estructura HTML
+    const htmlContent = `
+      <div>
+        <img src="${mentorData.photo}" alt="${mentorData.firstName} ${mentorData.lastName}">
+        <h1>${mentorData.firstName} ${mentorData.lastName}</h1>
+        <p><strong>Género:</strong> ${mentorData.gender}</p>
+        <p><strong>País:</strong> ${mentorData.country}</p>
+        <p><strong>Edad:</strong> ${mentorData.age}</p>
+        <p><strong>Categoría:</strong> ${mentorData.category}</p>
+        <p><strong>Ocupación:</strong> ${mentorData.occupation}</p>
+        <p><strong>Habilidades:</strong> ${mentorData.skills}</p>
+        <p><strong>Sobre Mí:</strong> ${mentorData.aboutMe}</p>
+        <h2>Productos:</h2>
+        <ul>
+          <li><strong>${mentorData.productList[0].name}:</strong> ${mentorData.productList[0].description} - Precio: $${mentorData.productList[0].price}</li>
+        </ul>
+      </div>
+    `;
+
+    // Insertar contenido en el contenedor
+    mentorDetailsContainer.innerHTML = htmlContent;
+  } catch (error) {
+    console.error("Error al obtener datos del mentor:", error);
+  }
+});
+</script>
+
+</body>
+</html>

@@ -39,6 +39,7 @@ public class MentorController {
                     .occupation(mentor.getOccupation())
                     .skills(mentor.getSkills())
                     .aboutMe(mentor.getAboutMe())
+                    .photo(mentor.getPhoto())
                     .productList(mentor.getProductList())
                     .build();
 
@@ -62,6 +63,7 @@ public class MentorController {
                         .occupation(mentor.getOccupation())
                         .skills(mentor.getSkills())
                         .aboutMe(mentor.getAboutMe())
+                        .photo(mentor.getPhoto())
                         .productList(mentor.getProductList())
                     .build())
                 .toList();
