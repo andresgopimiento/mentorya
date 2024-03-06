@@ -19,8 +19,16 @@ form.addEventListener('submit', (e)=>{
             tel:tel
         });
         localStorage.setItem('comusers',JSON.stringify(Users));
-        alert('El usuario fue registrado');
-        window.location.href = 'productos.html';
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "El registro fue exitoso",
+            showConfirmButton: false,
+            timer: 1500
+        });
+        setTimeout(function(){
+            window.location.href = 'productos.html';
+        }, 3000);
     }
 })
 

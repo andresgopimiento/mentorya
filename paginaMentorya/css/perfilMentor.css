@@ -7,6 +7,7 @@
   font-family: "Lato", sans-serif;
   margin: 0;
   padding: 0;
+  user-select: none;
 }
 body{
   background: var(--main-bg-color);
@@ -134,8 +135,25 @@ img.logo:hover{
   image-rendering: auto;
 }
 .perfil-info{
-  margin-bottom: 2rem;
-  font-size: small;
+  margin-bottom: 1rem;
+  font-size:medium;
+  width: 100%;
+  height: 6rem;
+  overflow-y:scroll;
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: orangered;
+    border-radius: 20px;   
+  }
+}
+.perfil-info ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
 }
 .perfil-data{
   display: flex;
@@ -151,7 +169,8 @@ img.logo:hover{
 }
 .servicios{
   color: var(--main-cont-color);
-  width: 25rem;
+  width: 26rem;
+  font-size: 15px;
 }
 .container__ventas{
   width: 60vw;

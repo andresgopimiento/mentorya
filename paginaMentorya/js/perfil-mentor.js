@@ -15,12 +15,22 @@ async function mentorSeleccionado() {
   let data = info.find((e) => e.id == mentorId);
   return data;
 }
+  let personas = [
+    {
+      id: 14,
+      info: "Nací el 12 de febrero de 1985 en Barcelona. Desde mi infancia, he sido un apasionado de la programación, comenzando con Locomotive BASIC en un Amstrad CPC 464. A lo largo de los años, he explorado diversas tecnologías y lenguajes de programación, impulsado por mi amor por el aprendizaje. Después de años de autoaprendizaje, cursé la Ingeniería Técnica de Informática de Gestión en la UOC y he continuado trabajando y aprendiendo como desarrollador. Disfruto asistiendo a reuniones de desarrolladores, conferencias, realizando talleres y compartiendo conocimientos, buscando siempre oportunidades para evolucionar en mi carrera.",
+      habilidades: "<li>Programación</li><li>Autoaprendizaje</li><li>Enseñanza</li><li>Asistencia a reuniones de desarrolladores</li><li>Asistencia a conferencias</li><li>Realización de talleres</li><li>Compartir conocimientos</li>"
+    }
+]
 document.addEventListener("DOMContentLoaded", async (e) => {
   const mentor = await mentorSeleccionado();
   async function renderUsers() {
     container.innerHTML = "";
     let hijo = document.createElement("div");
     hijo.classList.add("product");
+    let persona = personas.find(persona => persona.id == mentorId);
+    let info = persona ? persona.info : '';
+    let habilidades = persona ? persona.habilidades : '';
     hijo.innerHTML = `<div class="main__container">
   <section class="container__perfil">
     <div class="perfil-img">
@@ -28,18 +38,16 @@ document.addEventListener("DOMContentLoaded", async (e) => {
       <img src="${mentor.imagenMentor}" alt="">
     </div>
     <div class="perfil-info">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, fugit minima. Ad veniam autem laudantium, dicta reiciendis quasi ab tenetur.</p>
+      <ul>${habilidades}</ul>
     </div>
     <div class="perfil-data">
       <strong>${mentor.profesionMentor}</strong>
-      <strong>${mentor.paisMentor}</strong>
     </div>
   </section>
   <section class="container__ventas">
     <div class="ventas-servicios">
       <div class="servicios">
-        <strong>habilidades</strong>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis ea dolorem rem quod nemo ducimus totam enim odit alias corrupti commodi, debitis, necessitatibus quo excepturi, sunt ad sint quia voluptatum! Quidem ab cumque perferendis magni, quos suscipit ipsam similique incidunt.</p>
+        <p>${info}</p>
       </div>
       <div class="datepicker">
         <div class="datepicker-top">
@@ -102,7 +110,7 @@ document.addEventListener("DOMContentLoaded", async (e) => {
     </div>
     <div class="ventas-videos">
       <div class="videos-contenedor">
-        <iframe src="/videos/video-producto3.mp4" frameborder="0"></iframe>
+      <iframe src="/videos/video-5.mp4" frameborder="0"></iframe>
         <div class="video-titulo">
           <strong> Titulo del video</strong>
         </div>
@@ -125,7 +133,7 @@ document.addEventListener("DOMContentLoaded", async (e) => {
         </div>
       </div>
       <div class="videos-contenedor">
-        <iframe src="/videos/video-${mentorId}.mp4" frameborder="0"></iframe>
+        <iframe src="/videos/video-5.mp4" frameborder="0"></iframe>
         <div class="video-titulo">
           <strong> Titulo del video</strong>
         </div>
@@ -190,3 +198,5 @@ document.addEventListener("DOMContentLoaded", async (e) => {
   }
   renderUsers();
 });
+
+

@@ -216,12 +216,20 @@ img.logo:hover {
 .contenedor_info a {
   text-decoration: none;
   color: var(--main-bgd-color);
+  font-size: 16px;
+}
+.contenedor_info p {
+  margin-top: 10px;
+  font-size: 11px;
+  text-align: center;
 }
 .pepe {
   width: 70px;
-  background-color: #cac8c8;
+  background-color: gray;
   border-radius: 100%;
-  padding: 10px;
+  padding: 3px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 .nombre {
   font-weight: bold;

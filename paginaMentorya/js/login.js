@@ -8,12 +8,14 @@ form.addEventListener('submit', (e)=>{
 
     const Users = JSON.parse(localStorage.getItem('comusers'))||[];
     const isUserRegistered = Users.find(comusers => comusers.password == password && comusers.name == name);
-    // const usuario = JSON.parse(localStorage.getItem('comusers.name'))
     console.log(isUserRegistered);
     if (isUserRegistered) {
-        // alert (`Bienvenido ${isUserRegistered.name}`);
         window.location.href = 'productos.html';
     } else {
-        alert("El usuario no se encuentra registrado o el usuario no coincide con la contraseña");
+        Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "El usuario o la contraseña no coinciden"
+        });
     }
 })

@@ -34,7 +34,6 @@
                   </div>
                   <a href="perfil-mentor.html?id=${Users[i].id}"class="nombre">${Users[i].nombreMentor}</a>
                   <p class="pais">${Users[i].profesionMentor}</p>
-                  <p class="email">${Users[i].emailMentor}</p>
                   </div>
                   </div>
                   `;
@@ -50,21 +49,11 @@
                   </div>
                   <a href="perfil-mentor.html?id=${Users[i].id}"class="nombre">${Users[i].nombreMentor}</a>
                   <p class="pais">${Users[i].profesionMentor}</p>
-                  <p class="email">${Users[i].emailMentor}</p>
                   </div>
                   </div>
                   `;
         container.appendChild(hijo);
       }
-      // const contenedorMentor = document.querySelector(`.contenedor_producto${Users[i].id}`);
-      // console.log(contenedorMentor);
-      // if (contenedorMentor) {
-      //   contenedorMentor.addEventListener('click', (e) => {
-      //     window.location.href = `perfil-mentor.html?id=${Users[i].id}`
-      //   });
-      // }else {
-      //   console.log("noechite");
-      // }
     }
   }
   renderUsers();
